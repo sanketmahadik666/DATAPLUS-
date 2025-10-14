@@ -1,0 +1,64 @@
+
+DOCUMENT INFORMATION
+===================
+Document ID: DOC-009
+Department: Procurement
+Sub-Department: Invoices
+Desk: Invoice Desk
+Sub-Desk: Service Invoice
+
+DOCUMENT CONTENT
+================
+
+**SERVICE INVOICE PROCESSING**
+Invoice ID: INV-SVC-2024-0156
+Service Provider: CleanTech Maintenance Services
+Invoice Number: CTS-2024-456
+Service Period: February 1-28, 2024
+
+**Service Details:**
+| Service Type | Units | Rate (₹) | Amount (₹) |
+|--------------|-------|----------|------------|
+| Office Cleaning (Daily) | 20 days | 2,500 | 50,000 |
+| Deep Cleaning (Weekly) | 4 weeks | 8,000 | 32,000 |
+| Window Cleaning | 1 time | 15,000 | 15,000 |
+| Carpet Cleaning | 1 time | 12,000 | 12,000 |
+| Pest Control | 1 time | 8,500 | 8,500 |
+
+**Service Summary:**
+- Total man-hours: 320 hours
+- Service locations: 5 floors, 2 buildings
+- Quality rating: 4.8/5.0
+- Customer complaints: 0
+
+**Billing Breakdown:**
+**Subtotal:** ₹1,17,500
+**GST @ 18%:** ₹21,150
+**Total Amount:** ₹1,38,650
+
+**Verification Checklist:**
+✓ Services performed as per contract
+✓ Quality standards met
+✓ Timesheets verified
+✓ Customer feedback positive
+✓ Safety protocols followed
+✓ Equipment properly maintained
+
+**Payment Processing:**
+- Invoice approved: March 11, 2024
+- Payment method: RTGS
+- Payment date: March 15, 2024
+- Reference number: PAY-SVC-2024-0156
+
+**Performance Notes:**
+Excellent service quality with zero complaints. Team showed professionalism and punctuality. Recommended for contract renewal.
+
+**Special Recognition:**
+Service team received appreciation from 3 department heads for exceptional cleaning during client visit preparation.
+
+Processed by: Service Procurement Team
+Approved by: Facility Manager
+
+---
+Generated on: 2025-09-19 18:59:29
+Document Management System - Synthetic Data

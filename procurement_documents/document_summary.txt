@@ -1,0 +1,23 @@
+PROCUREMENT DOCUMENTS SUMMARY
+============================
+
+Total Documents: 15
+Generated on: 2025-09-19 18:59:29
+
+DOCUMENT LIST:
+=============
+DOC-001 - Contracts - Domestic Contracts
+DOC-002 - Vendor Management - Vendor Registration
+DOC-003 - Purchase Orders - International PO
+DOC-004 - Invoices - Supplier Invoice
+DOC-005 - Compliance Notices - Regulatory Circulars
+DOC-006 - Contracts - International Contracts
+DOC-007 - Vendor Management - Vendor Performance
+DOC-008 - Purchase Orders - Domestic PO
+DOC-009 - Invoices - Service Invoice
+DOC-010 - Compliance Notices - Audit Notices
+DOC-011 - Contracts - Domestic Contracts
+DOC-012 - Vendor Management - Vendor Registration
+DOC-013 - Purchase Orders - International PO
+DOC-014 - Invoices - Supplier Invoice
+DOC-015 - Compliance Notices - Regulatory Circulars

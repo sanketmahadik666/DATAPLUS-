@@ -1,0 +1,44 @@
+
+DOCUMENT INFORMATION
+===================
+Document ID: DOC-001
+Department: Procurement
+Sub-Department: Contracts
+Desk: Contracts Desk
+Sub-Desk: Domestic Contracts
+
+DOCUMENT CONTENT
+================
+
+**CONTRACT RENEWAL NOTICE**
+Contract ID: CNT-2024-001
+Vendor: TechSolutions India Pvt Ltd
+Effective Date: March 15, 2024
+Expiry Date: March 14, 2025
+
+Dear Vendor,
+
+This notice serves to inform you of the automatic renewal of our existing service contract for IT infrastructure maintenance. The contract value has been revised to ₹2,450,000 (Two Lakh Forty-Five Thousand Rupees Only) for the upcoming fiscal year.
+
+**Key Terms:**
+• Service Level Agreement: 99.5% uptime guarantee
+• Response Time: 4 hours for critical issues
+• Monthly reporting required by 5th of each month
+• Payment terms: Net 30 days
+
+**Asset Coverage:**
+- Server Rack A-001 to A-012
+- Network Equipment N-201 to N-245
+- Workstation Assets W-5001 to W-5120
+
+Please acknowledge receipt of this renewal notice within 7 business days. For any queries, contact our Contracts Manager at contracts@company.com.
+
+**മലയാളം:** ഈ കരാർ പുതുക്കൽ അറിയിപ്പ് സ്വീകരിച്ചതായി 7 ബിസിനസ് ദിവസങ്ങൾക്കുള്ളിൽ സ്ഥിരീകരിക്കുക.
+
+---
+Signature: [Digital Signature]
+Date: February 28, 2024
+
+---
+Generated on: 2025-09-19 18:59:29
+Document Management System - Synthetic Data

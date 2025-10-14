@@ -1,0 +1,73 @@
+
+DOCUMENT INFORMATION
+===================
+Document ID: DOC-013
+Department: Procurement
+Sub-Department: Purchase Orders
+Desk: PO Desk
+Sub-Desk: International PO
+
+DOCUMENT CONTENT
+================
+
+**URGENT INTERNATIONAL PURCHASE ORDER**
+PO Number: PO-INT-URG-2024-023
+Date: March 14, 2024
+Priority: HIGH
+Currency: USD
+
+**Vendor Information:**
+Company: MedTech Global Inc
+Address: 456 Healthcare Drive, Boston, MA 02118, USA
+Contact: emergency@medtechglobal.com
+Phone: +1-617-555-0123
+
+**Urgency Justification:**
+Critical medical equipment required for emergency response to recent health crisis. Equipment needed within 48 hours for patient care operations.
+
+**Shipping Details:**
+Ship To: Chennai International Airport, India
+Delivery Terms: DAP Chennai
+Required Delivery: March 16, 2024 (48 hours)
+Transportation: Air freight (priority)
+
+**Emergency Purchase Details:**
+| Item Code | Description | Qty | Unit Price (USD) | Total (USD) |
+|-----------|-------------|-----|------------------|-------------|
+| MT-VENT-001 | Portable Ventilators | 20 | $15,000.00 | $300,000.00 |
+| MT-OXY-002 | Oxygen Concentrators | 50 | $2,500.00 | $125,000.00 |
+| MT-MON-003 | Patient Monitors | 30 | $8,000.00 | $240,000.00 |
+| MT-DEF-004 | Defibrillators | 15 | $12,000.00 | $180,000.00 |
+
+**Total Order Value:** $845,000.00
+**Exchange Rate:** 1 USD = ₹83.50
+**Total in INR:** ₹7,05,57,500
+
+**Special Terms:**
+- Payment: 100% advance via wire transfer
+- Insurance: Comprehensive coverage included
+- Customs: Pre-cleared for fast processing
+- Documentation: Simplified for emergency
+
+**Regulatory Approvals:**
+✓ FDA approval for all equipment
+✓ CDSCO import license obtained
+✓ Emergency customs clearance arranged
+✓ Medical device registration pending
+
+**Delivery Confirmation:**
+Vendor confirmed delivery within 48 hours via air freight. Tracking number will be provided within 4 hours of dispatch.
+
+**Emergency Contacts:**
+- Procurement: +91-9876543210
+- Logistics: +91-9876543211
+- Medical: +91-9876543212
+
+**അടിയന്തിര വാങ്ങൽ:** ഈ ഉപകരണങ്ങൾ രോഗികളുടെ ചികിത്സയ്ക്ക് അത്യാവശ്യമാണ്. 48 മണിക്കൂറിനുള്ളിൽ ഡെലിവറി ഉറപ്പാക്കണം.
+
+Authorized by: Emergency Procurement Committee
+Approved by: Medical Director
+
+---
+Generated on: 2025-09-19 18:59:29
+Document Management System - Synthetic Data

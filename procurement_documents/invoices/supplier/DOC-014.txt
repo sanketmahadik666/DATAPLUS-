@@ -1,0 +1,79 @@
+
+DOCUMENT INFORMATION
+===================
+Document ID: DOC-014
+Department: Procurement
+Sub-Department: Invoices
+Desk: Invoice Desk
+Sub-Desk: Supplier Invoice
+
+DOCUMENT CONTENT
+================
+
+**INVOICE DISCREPANCY REPORT**
+Invoice ID: INV-2024-0089
+Vendor: Construction Materials Ltd
+Invoice Number: CML-2024-567
+Date Received: March 15, 2024
+Discrepancy Type: Quantity Mismatch
+
+**Invoice Details:**
+| Item | Invoice Qty | Received Qty | Variance | Status |
+|------|-------------|--------------|----------|--------|
+| Cement Bags (50kg) | 1000 | 950 | -50 | Shortage |
+| Steel Rods (12mm) | 500 | 500 | 0 | Match |
+| Sand (Cubic Meter) | 50 | 45 | -5 | Shortage |
+| Gravel (Cubic Meter) | 30 | 30 | 0 | Match |
+
+**Financial Impact:**
+| Item | Shortage | Rate (₹) | Amount (₹) |
+|------|----------|----------|------------|
+| Cement Bags | 50 | 350 | 17,500 |
+| Sand | 5 | 1,200 | 6,000 |
+| **Total Shortage** | | | **23,500** |
+
+**Investigation Results:**
+1. **Delivery Verification:**
+   - Delivery challan shows correct quantities
+   - Warehouse receipt shows shortages
+   - Driver confirmed full loading at vendor premises
+
+2. **Possible Causes:**
+   - Theft during transit (reported to police)
+   - Measurement errors at loading
+   - Damaged goods not reported
+
+3. **Vendor Response:**
+   - Vendor claims full delivery
+   - Refuses to accept responsibility
+   - Demands full payment
+
+**Actions Taken:**
+- Police complaint filed for theft
+- Insurance claim initiated
+- Vendor meeting scheduled
+- Quality inspection conducted
+
+**Resolution Options:**
+1. **Option 1:** Vendor supplies missing items
+2. **Option 2:** Credit note for shortage amount
+3. **Option 3:** Legal action for breach of contract
+
+**Recommendation:**
+Issue credit note for ₹23,500 and request vendor to improve security measures for future deliveries.
+
+**Payment Status:** On hold pending resolution
+
+**Next Steps:**
+- Vendor meeting: March 18, 2024
+- Final decision: March 20, 2024
+- Payment processing: March 22, 2024
+
+**മലയാളം:** ഈ അസാമാന്യത പരിഹരിക്കുന്നതുവരെ പേയ്മെന്റ് നിർത്തിവയ്ക്കപ്പെട്ടിരിക്കുന്നു.
+
+Reported by: Warehouse Team
+Investigated by: Procurement Team
+
+---
+Generated on: 2025-09-19 18:59:29
+Document Management System - Synthetic Data

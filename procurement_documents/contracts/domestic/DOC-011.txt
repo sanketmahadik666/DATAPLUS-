@@ -1,0 +1,84 @@
+
+DOCUMENT INFORMATION
+===================
+Document ID: DOC-011
+Department: Procurement
+Sub-Department: Contracts
+Desk: Contracts Desk
+Sub-Desk: Domestic Contracts
+
+DOCUMENT CONTENT
+================
+
+**CONTRACT AMENDMENT NOTICE**
+Original Contract: CNT-2023-089
+Amendment Number: AMEND-001
+Amendment Date: March 12, 2024
+Effective Date: April 1, 2024
+
+**Contract Parties:**
+- Company: [Company Name]
+- Vendor: DataSecure IT Solutions
+- Original Contract Date: January 15, 2023
+- Original Expiry: January 14, 2024
+
+**Amendment Summary:**
+This amendment extends the cybersecurity services contract for an additional 12 months and includes enhanced security monitoring services.
+
+**Changes Made:**
+
+**1. Contract Duration:**
+- Original: January 15, 2023 - January 14, 2024
+- Amended: January 15, 2023 - January 14, 2025
+
+**2. Service Scope Addition:**
+- 24/7 Security Operations Center (SOC) monitoring
+- Advanced Threat Detection and Response
+- Monthly security assessment reports
+- Incident response team availability
+
+**3. Pricing Updates:**
+| Service | Original Rate (₹) | New Rate (₹) | Change |
+|---------|-------------------|--------------|--------|
+| Basic Security | 1,50,000/month | 1,75,000/month | +16.7% |
+| SOC Monitoring | N/A | 2,00,000/month | New |
+| Incident Response | 25,000/incident | 20,000/incident | -20% |
+
+**4. Performance Metrics:**
+- Response time: 2 hours (improved from 4 hours)
+- Threat detection accuracy: 99.5%
+- False positive rate: <2%
+- Monthly reporting: 5th of each month
+
+**5. Compliance Requirements:**
+- ISO 27001 certification maintenance
+- SOC 2 Type II compliance
+- Regular penetration testing (quarterly)
+- Employee background verification
+
+**Financial Impact:**
+- Additional annual cost: ₹24,00,000
+- Total contract value: ₹45,00,000
+- ROI expected: 15% through risk reduction
+
+**Approval Authority:**
+- Procurement Manager: [Signature]
+- IT Security Head: [Signature]
+- Finance Director: [Signature]
+
+**Implementation Plan:**
+- Phase 1 (April 1-15): SOC setup and integration
+- Phase 2 (April 16-30): Team training and testing
+- Phase 3 (May 1 onwards): Full operational deployment
+
+**Terms & Conditions:**
+All other terms of the original contract remain unchanged unless specifically modified above.
+
+**അനുമോദനം:** ഈ കരാർ പരിഷ്കരണം ഏപ്രിൽ 1 മുതൽ ബാധകമാകും. പുതിയ സേവനങ്ങൾ ഉടനെ ആരംഭിക്കും.
+
+Executed by: [Digital Signatures]
+Date: March 12, 2024
+
+---
+Generated on: 2025-09-19 18:59:29
+Document Management System - Synthetic Data

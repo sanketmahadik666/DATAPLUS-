@@ -1,0 +1,54 @@
+
+DOCUMENT INFORMATION
+===================
+Document ID: DOC-004
+Department: Procurement
+Sub-Department: Invoices
+Desk: Invoice Desk
+Sub-Desk: Supplier Invoice
+
+DOCUMENT CONTENT
+================
+
+**INVOICE PROCESSING NOTICE**
+Invoice ID: INV-2024-0034
+Vendor: OfficeSupplies Pro
+Invoice Number: OSP-2024-789
+Date Received: March 5, 2024
+
+**Invoice Details:**
+| Description | Quantity | Rate (₹) | Amount (₹) |
+|-------------|----------|----------|------------|
+| A4 Paper (500 sheets) | 200 reams | 180.00 | 36,000.00 |
+| Ball Point Pens (Blue) | 500 pieces | 12.00 | 6,000.00 |
+| Stapler Pins (Box of 1000) | 50 boxes | 45.00 | 2,250.00 |
+| File Folders (A4) | 100 pieces | 25.00 | 2,500.00 |
+
+**Subtotal:** ₹46,750.00
+**GST @ 18%:** ₹8,415.00
+**Total Amount:** ₹55,165.00
+
+**Verification Status:**
+✓ Quantity received matches invoice
+✓ Quality inspection passed
+✓ Price verification against contract
+✓ GST calculation verified
+✓ Vendor registration valid
+
+**Payment Processing:**
+- Approved for payment: March 6, 2024
+- Payment method: NEFT
+- Expected payment date: March 12, 2024
+- Payment reference: PAY-2024-0034
+
+**Discrepancies Found:** None
+**Action Required:** None
+
+**Notes:** All items delivered in good condition. Vendor performance rating: Excellent.
+
+Processed by: Accounts Payable Team
+Approved by: Finance Manager
+
+---
+Generated on: 2025-09-19 18:59:29
+Document Management System - Synthetic Data

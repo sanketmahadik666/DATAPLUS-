@@ -1,0 +1,64 @@
+
+DOCUMENT INFORMATION
+===================
+Document ID: DOC-006
+Department: Procurement
+Sub-Department: Contracts
+Desk: Contracts Desk
+Sub-Desk: International Contracts
+
+DOCUMENT CONTENT
+================
+
+**INTERNATIONAL SERVICE AGREEMENT**
+Agreement ID: ISA-2024-045
+Counterparty: EuropeanTech Solutions GmbH
+Jurisdiction: Germany
+Governing Law: German Commercial Code
+
+**Agreement Summary:**
+This agreement covers the provision of cloud infrastructure services for our European operations. The contract value is €850,000 (Euros Eight Hundred Fifty Thousand Only) for a period of 24 months.
+
+**Service Scope:**
+• Cloud hosting and management
+• Data backup and recovery services
+• 24/7 technical support
+• Security monitoring and compliance
+• Performance optimization
+
+**Key Performance Indicators:**
+| Metric | Target | Measurement |
+|--------|--------|-------------|
+| Uptime | 99.9% | Monthly average |
+| Response Time | < 2 hours | Critical issues |
+| Data Recovery | < 4 hours | RTO target |
+| Security Incidents | 0 | Zero tolerance |
+
+**Payment Schedule:**
+- Monthly payments: €35,417
+- Currency: EUR
+- Payment method: SWIFT transfer
+- Due date: 15th of each month
+
+**Termination Clauses:**
+- Notice period: 90 days
+- Early termination fee: 3 months service charges
+- Data migration support included
+
+**Force Majeure:** Includes pandemic, natural disasters, and regulatory changes.
+
+**Dispute Resolution:** Arbitration under ICC Rules, Paris
+
+**Data Protection:** GDPR compliant with DPA signed
+
+**Amendment History:**
+- Version 1.0: March 8, 2024 (Initial)
+- Version 1.1: March 10, 2024 (Payment terms updated)
+
+**Signatures:**
+[Digital Signatures of both parties]
+Date: March 8, 2024
+
+---
+Generated on: 2025-09-19 18:59:29
+Document Management System - Synthetic Data

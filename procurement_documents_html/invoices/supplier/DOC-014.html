@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOC-014 - Invoices</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .header {
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .doc-id {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .metadata {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #007bff;
+            margin-bottom: 30px;
+        }
+        
+        .metadata table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .metadata td {
+            padding: 8px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .metadata td:first-child {
+            font-weight: bold;
+            width: 30%;
+        }
+        
+        .content {
+            margin-top: 30px;
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 22px;
+            color: #007bff;
+        }
+        
+        h3 {
+            font-size: 18px;
+            color: #495057;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .signature {
+            margin-top: 40px;
+            border-top: 2px solid #dee2e6;
+            padding-top: 20px;
+            text-align: right;
+            font-style: italic;
+        }
+        
+        .malayalam {
+            font-family: 'Noto Sans Malayalam', 'Arial', sans-serif;
+            background-color: #fff3cd;
+            padding: 10px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 12px;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            padding-top: 20px;
+        }
+        
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .print-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button no-print" onclick="window.print()">Print to PDF</button>
+    
+    <div class="header">
+        <div class="doc-id">DOC-014</div>
+        <div style="font-size: 18px; color: #007bff;">Invoices</div>
+    </div>
+    
+    <div class="metadata">
+        <table>
+            <tr><td>Document ID:</td><td>DOC-014</td></tr>
+            <tr><td>Department:</td><td>Procurement</td></tr>
+            <tr><td>Sub-Department:</td><td>Invoices</td></tr>
+            <tr><td>Desk:</td><td>Invoice Desk</td></tr>
+            <tr><td>Sub-Desk:</td><td>Supplier Invoice</td></tr>
+        </table>
+    </div>
+    
+    <div class="content">
+        <strong>INVOICE DISCREPANCY REPORT</strong><br>
+Invoice ID: INV-2024-0089<br>
+Vendor: Construction Materials Ltd<br>
+Invoice Number: CML-2024-567<br>
+Date Received: March 15, 2024<br>
+Discrepancy Type: Quantity Mismatch<br>
+<br>
+<strong>Invoice Details:</strong><br>
+| Item | Invoice Qty | Received Qty | Variance | Status |<br>
+|------|-------------|--------------|----------|--------|<br>
+| Cement Bags (50kg) | 1000 | 950 | -50 | Shortage |<br>
+| Steel Rods (12mm) | 500 | 500 | 0 | Match |<br>
+| Sand (Cubic Meter) | 50 | 45 | -5 | Shortage |<br>
+| Gravel (Cubic Meter) | 30 | 30 | 0 | Match |<br>
+<br>
+<strong>Financial Impact:</strong><br>
+| Item | Shortage | Rate (₹) | Amount (₹) |<br>
+|------|----------|----------|------------|<br>
+| Cement Bags | 50 | 350 | 17,500 |<br>
+| Sand | 5 | 1,200 | 6,000 |<br>
+| <strong>Total Shortage</strong> | | | <strong>23,500</strong> |<br>
+<br>
+<strong>Investigation Results:</strong><br>
+1. <strong>Delivery Verification:</strong><br>
+   - Delivery challan shows correct quantities<br>
+   - Warehouse receipt shows shortages<br>
+   - Driver confirmed full loading at vendor premises<br>
+<br>
+2. <strong>Possible Causes:</strong><br>
+   - Theft during transit (reported to police)<br>
+   - Measurement errors at loading<br>
+   - Damaged goods not reported<br>
+<br>
+3. <strong>Vendor Response:</strong><br>
+   - Vendor claims full delivery<br>
+   - Refuses to accept responsibility<br>
+   - Demands full payment<br>
+<br>
+<strong>Actions Taken:</strong><br>
+<ul><li>Police complaint filed for theft</li><br>
+<li>Insurance claim initiated</li><br>
+<li>Vendor meeting scheduled</li><br>
+<li>Quality inspection conducted</li></ul><br>
+<br>
+<strong>Resolution Options:</strong><br>
+1. <strong>Option 1:</strong> Vendor supplies missing items<br>
+2. <strong>Option 2:</strong> Credit note for shortage amount<br>
+3. <strong>Option 3:</strong> Legal action for breach of contract<br>
+<br>
+<strong>Recommendation:</strong><br>
+Issue credit note for ₹23,500 and request vendor to improve security measures for future deliveries.<br>
+<br>
+<strong>Payment Status:</strong> On hold pending resolution<br>
+<br>
+<strong>Next Steps:</strong><br>
+<ul><li>Vendor meeting: March 18, 2024</li><br>
+<li>Final decision: March 20, 2024</li><br>
+<li>Payment processing: March 22, 2024</li></ul><br>
+<br>
+<strong>മലയാളം:</strong> ഈ അസാമാന്യത പരിഹരിക്കുന്നതുവരെ പേയ്മെന്റ് നിർത്തിവയ്ക്കപ്പെട്ടിരിക്കുന്നു.<br>
+<br>
+Reported by: Warehouse Team<br>
+Investigated by: Procurement Team
+    </div>
+    
+    <div class="footer">
+        <p>Generated on: 2025-09-19 19:01:09</p>
+        <p>Document Management System - Synthetic Data</p>
+    </div>
+</body>
+</html>

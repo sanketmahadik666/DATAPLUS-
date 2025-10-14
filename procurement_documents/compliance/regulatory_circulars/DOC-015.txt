@@ -1,0 +1,103 @@
+
+DOCUMENT INFORMATION
+===================
+Document ID: DOC-015
+Department: Procurement
+Sub-Department: Compliance Notices
+Desk: Compliance Desk
+Sub-Desk: Regulatory Circulars
+
+DOCUMENT CONTENT
+================
+
+**SUSTAINABLE PROCUREMENT POLICY UPDATE**
+Policy ID: POL-SUS-2024-001
+Effective Date: April 1, 2024
+Review Date: March 31, 2025
+
+**Policy Overview:**
+This policy update mandates sustainable procurement practices across all departments to align with our environmental, social, and governance (ESG) commitments.
+
+**New Requirements:**
+
+**1. Environmental Standards:**
+- All vendors must have ISO 14001 certification
+- Carbon footprint reporting for all purchases
+- Preference for eco-friendly products and services
+- Waste reduction targets: 20% by end of 2024
+
+**2. Social Responsibility:**
+- Vendor diversity targets: 30% from MSMEs
+- Fair trade certification for applicable products
+- Labor standards compliance verification
+- Community impact assessment for major contracts
+
+**3. Governance Requirements:**
+- Anti-corruption compliance certification
+- Data protection and privacy compliance
+- Financial stability verification
+- Regular vendor audits and assessments
+
+**Implementation Guidelines:**
+
+**Phase 1 (April-June 2024):**
+- Update vendor evaluation criteria
+- Train procurement staff on new requirements
+- Develop sustainability scoring system
+- Identify priority vendor categories
+
+**Phase 2 (July-September 2024):**
+- Implement new evaluation processes
+- Update contract templates
+- Launch vendor sustainability program
+- Begin carbon footprint tracking
+
+**Phase 3 (October-December 2024):**
+- Full implementation across all categories
+- Performance monitoring and reporting
+- Continuous improvement initiatives
+- Annual sustainability report preparation
+
+**Key Performance Indicators:**
+| Metric | Target 2024 | Measurement |
+|--------|-------------|-------------|
+| Sustainable Vendors | 80% | Percentage of total spend |
+| Carbon Reduction | 15% | Year-over-year reduction |
+| MSME Spend | 30% | Percentage of total procurement |
+| Waste Reduction | 20% | Reduction in packaging waste |
+
+**Training Requirements:**
+- All procurement staff: 8 hours sustainability training
+- Vendor management team: 16 hours advanced training
+- Contract managers: 12 hours policy implementation
+- Annual refresher training: 4 hours
+
+**Reporting Requirements:**
+- Monthly sustainability metrics
+- Quarterly vendor performance reviews
+- Annual sustainability impact report
+- ESG compliance dashboard updates
+
+**Penalties for Non-Compliance:**
+- First violation: Warning and training
+- Second violation: Contract review and modification
+- Third violation: Vendor suspension or termination
+
+**Support Resources:**
+- Sustainability team: sustainability@company.com
+- Training portal: training.company.com/sustainability
+- Policy helpline: +91-1800-SUSTAIN
+
+**മലയാളം:** ഈ പുതിയ സുസ്ഥിര വാങ്ങൽ നയം ഏപ്രിൽ 1 മുതൽ ബാധകമാകും. എല്ലാ വാങ്ങൽ പ്രവർത്തനങ്ങളും പരിസ്ഥിതി സൗഹൃദമായിരിക്കണം.
+
+**Approval Authority:**
+- Chief Sustainability Officer: [Signature]
+- Procurement Director: [Signature]
+- Legal Counsel: [Signature]
+
+Issued by: Sustainability Department
+Approved by: Board of Directors
+
+---
+Generated on: 2025-09-19 18:59:29
+Document Management System - Synthetic Data

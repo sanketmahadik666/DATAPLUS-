@@ -1,0 +1,53 @@
+
+DOCUMENT INFORMATION
+===================
+Document ID: DOC-002
+Department: Procurement
+Sub-Department: Vendor Management
+Desk: Vendor Desk
+Sub-Desk: Vendor Registration
+
+DOCUMENT CONTENT
+================
+
+**NEW VENDOR REGISTRATION FORM**
+Application ID: VND-2024-089
+Company Name: GreenEnergy Solutions
+Registration Date: March 1, 2024
+
+**Company Details:**
+| Field | Value |
+|-------|-------|
+| Registration Number | U74999DL2024PTC123456 |
+| PAN | ABCDE1234F |
+| GSTIN | 07ABCDE1234F1Z5 |
+| Contact Person | Ms. Priya Sharma |
+| Email | priya.sharma@greenenergy.com |
+| Phone | +91-9876543210 |
+
+**Business Category:** Renewable Energy Equipment
+**Annual Turnover:** ₹15,00,00,000
+**Years in Business:** 8 years
+
+**Required Documents Submitted:**
+✓ Company Registration Certificate
+✓ PAN Card Copy
+✓ GST Registration Certificate
+✓ Bank Account Details
+✓ ISO 9001:2015 Certification
+✓ Financial Statements (Last 3 years)
+
+**Evaluation Status:** Under Review
+**Expected Completion:** March 15, 2024
+
+**Terms & Conditions:**
+- Vendor code will be assigned upon approval
+- Initial credit limit: ₹50,00,000
+- Payment terms: Net 45 days
+- Performance review after 6 months
+
+For status updates, please contact vendor.management@company.com
+
+---
+Generated on: 2025-09-19 18:59:29
+Document Management System - Synthetic Data

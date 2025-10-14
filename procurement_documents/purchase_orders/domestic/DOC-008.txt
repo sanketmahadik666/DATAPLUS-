@@ -1,0 +1,62 @@
+
+DOCUMENT INFORMATION
+===================
+Document ID: DOC-008
+Department: Procurement
+Sub-Department: Purchase Orders
+Desk: PO Desk
+Sub-Desk: Domestic PO
+
+DOCUMENT CONTENT
+================
+
+**DOMESTIC PURCHASE ORDER**
+PO Number: PO-DOM-2024-234
+Date: March 10, 2024
+Vendor Code: VND-2023-089
+
+**Vendor Details:**
+Company: SteelWorks Industries
+Address: Plot No. 45, Industrial Area, Pune, Maharashtra 411019
+Contact: sales@steelworks.com
+Phone: +91-20-25678901
+
+**Delivery Information:**
+Delivery Address: Company Warehouse, Sector 12, Gurgaon
+Delivery Date: March 25, 2024
+Transportation: Vendor arranged
+
+**Purchase Details:**
+| Item Code | Description | Specification | Qty | Rate (₹) | Amount (₹) |
+|-----------|-------------|---------------|-----|----------|------------|
+| SW-ISMB-200 | ISMB 200x100x5.4 | Grade: Fe415 | 50 MT | 65,000 | 32,50,000 |
+| SW-PLATE-10 | MS Plate 10mm | Size: 6x3 feet | 25 sheets | 8,500 | 2,12,500 |
+| SW-ANGLE-50 | L-Angle 50x50x5 | Length: 6 meters | 100 pieces | 450 | 45,000 |
+
+**Subtotal:** ₹35,07,500
+**GST @ 18%:** ₹6,31,350
+**Total Amount:** ₹41,38,850
+
+**Terms & Conditions:**
+• Payment: 30% advance, 70% on delivery
+• Quality: Material test certificates required
+• Packing: Proper packing to prevent damage
+• Insurance: Vendor's responsibility during transit
+
+**Special Requirements:**
+- All materials must be ISI marked
+- Delivery challan in triplicate
+- Quality inspection before unloading
+- 1-year warranty on structural integrity
+
+**Approval Authority:**
+Procurement Manager: [Signature]
+Finance Manager: [Signature]
+
+**അന്തരീക്ഷ സംരക്ഷണം:** പാക്കിംഗ് മെറ്റീരിയലുകൾ പുനരുപയോഗിക്കാവുന്നതായിരിക്കണം.
+
+Authorized by: Procurement Department
+
+---
+Generated on: 2025-09-19 18:59:29
+Document Management System - Synthetic Data

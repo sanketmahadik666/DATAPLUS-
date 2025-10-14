@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOC-008 - Purchase Orders</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .header {
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .doc-id {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .metadata {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #007bff;
+            margin-bottom: 30px;
+        }
+        
+        .metadata table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .metadata td {
+            padding: 8px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .metadata td:first-child {
+            font-weight: bold;
+            width: 30%;
+        }
+        
+        .content {
+            margin-top: 30px;
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 22px;
+            color: #007bff;
+        }
+        
+        h3 {
+            font-size: 18px;
+            color: #495057;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .signature {
+            margin-top: 40px;
+            border-top: 2px solid #dee2e6;
+            padding-top: 20px;
+            text-align: right;
+            font-style: italic;
+        }
+        
+        .malayalam {
+            font-family: 'Noto Sans Malayalam', 'Arial', sans-serif;
+            background-color: #fff3cd;
+            padding: 10px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 12px;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            padding-top: 20px;
+        }
+        
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .print-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button no-print" onclick="window.print()">Print to PDF</button>
+    
+    <div class="header">
+        <div class="doc-id">DOC-008</div>
+        <div style="font-size: 18px; color: #007bff;">Purchase Orders</div>
+    </div>
+    
+    <div class="metadata">
+        <table>
+            <tr><td>Document ID:</td><td>DOC-008</td></tr>
+            <tr><td>Department:</td><td>Procurement</td></tr>
+            <tr><td>Sub-Department:</td><td>Purchase Orders</td></tr>
+            <tr><td>Desk:</td><td>PO Desk</td></tr>
+            <tr><td>Sub-Desk:</td><td>Domestic PO</td></tr>
+        </table>
+    </div>
+    
+    <div class="content">
+        <strong>DOMESTIC PURCHASE ORDER</strong><br>
+PO Number: PO-DOM-2024-234<br>
+Date: March 10, 2024<br>
+Vendor Code: VND-2023-089<br>
+<br>
+<strong>Vendor Details:</strong><br>
+Company: SteelWorks Industries<br>
+Address: Plot No. 45, Industrial Area, Pune, Maharashtra 411019<br>
+Contact: sales@steelworks.com<br>
+Phone: +91-20-25678901<br>
+<br>
+<strong>Delivery Information:</strong><br>
+Delivery Address: Company Warehouse, Sector 12, Gurgaon<br>
+Delivery Date: March 25, 2024<br>
+Transportation: Vendor arranged<br>
+<br>
+<strong>Purchase Details:</strong><br>
+| Item Code | Description | Specification | Qty | Rate (₹) | Amount (₹) |<br>
+|-----------|-------------|---------------|-----|----------|------------|<br>
+| SW-ISMB-200 | ISMB 200x100x5.4 | Grade: Fe415 | 50 MT | 65,000 | 32,50,000 |<br>
+| SW-PLATE-10 | MS Plate 10mm | Size: 6x3 feet | 25 sheets | 8,500 | 2,12,500 |<br>
+| SW-ANGLE-50 | L-Angle 50x50x5 | Length: 6 meters | 100 pieces | 450 | 45,000 |<br>
+<br>
+<strong>Subtotal:</strong> ₹35,07,500<br>
+<strong>GST @ 18%:</strong> ₹6,31,350<br>
+<strong>Total Amount:</strong> ₹41,38,850<br>
+<br>
+<strong>Terms & Conditions:</strong><br>
+<ul><li>Payment: 30% advance, 70% on delivery</li><br>
+<li>Quality: Material test certificates required</li><br>
+<li>Packing: Proper packing to prevent damage</li><br>
+<li>Insurance: Vendor's responsibility during transit</li></ul><br>
+<br>
+<strong>Special Requirements:</strong><br>
+<ul><li>All materials must be ISI marked</li><br>
+<li>Delivery challan in triplicate</li><br>
+<li>Quality inspection before unloading</li><br>
+<li>1-year warranty on structural integrity</li></ul><br>
+<br>
+<strong>Approval Authority:</strong><br>
+Procurement Manager: [Signature]<br>
+Finance Manager: [Signature]<br>
+<br>
+<strong>അന്തരീക്ഷ സംരക്ഷണം:</strong> പാക്കിംഗ് മെറ്റീരിയലുകൾ പുനരുപയോഗിക്കാവുന്നതായിരിക്കണം.<br>
+<br>
+Authorized by: Procurement Department
+    </div>
+    
+    <div class="footer">
+        <p>Generated on: 2025-09-19 19:01:09</p>
+        <p>Document Management System - Synthetic Data</p>
+    </div>
+</body>
+</html>

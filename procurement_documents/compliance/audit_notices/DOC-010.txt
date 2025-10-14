@@ -1,0 +1,78 @@
+
+DOCUMENT INFORMATION
+===================
+Document ID: DOC-010
+Department: Procurement
+Sub-Department: Compliance Notices
+Desk: Compliance Desk
+Sub-Desk: Audit Notices
+
+DOCUMENT CONTENT
+================
+
+**INTERNAL AUDIT NOTICE - PROCUREMENT**
+Audit ID: AUD-2024-089
+Audit Type: Quarterly Compliance Review
+Scheduled Date: March 18-22, 2024
+Audit Team: Internal Audit Department
+
+**Audit Scope:**
+This audit will review procurement processes and compliance for Q1 2024 (January-March). The audit will cover all procurement activities, vendor management, and contract administration.
+
+**Areas Under Review:**
+1. **Purchase Order Processing**
+   - Authorization limits and approvals
+   - Vendor selection criteria
+   - Price comparison documentation
+   - Delivery and quality compliance
+
+2. **Vendor Management**
+   - Vendor registration and verification
+   - Performance evaluation records
+   - Contract compliance monitoring
+   - Payment processing accuracy
+
+3. **Contract Administration**
+   - Contract execution and monitoring
+   - Amendment and renewal processes
+   - Risk assessment and mitigation
+   - Documentation completeness
+
+**Required Documents:**
+• All POs issued in Q1 2024
+• Vendor registration files
+• Contract files and amendments
+• Payment vouchers and approvals
+• Performance evaluation reports
+• Compliance certificates
+
+**Audit Team:**
+- Lead Auditor: Ms. Anjali Kumar
+- Assistant Auditor: Mr. Rajesh Patel
+- IT Auditor: Mr. Vikram Singh
+
+**Preparation Requirements:**
+1. Organize all documents by category
+2. Prepare summary reports for each area
+3. Identify any pending issues or exceptions
+4. Arrange meeting rooms for interviews
+5. Provide system access for audit team
+
+**Timeline:**
+- Day 1-2: Document review and system access
+- Day 3: Process walkthrough and interviews
+- Day 4: Testing and verification
+- Day 5: Exit meeting and preliminary findings
+
+**Contact Information:**
+Audit Team: internal.audit@company.com
+Procurement Contact: procurement.audit@company.com
+
+**മലയാളം:** ഈ ഓഡിറ്റ് മാർച്ച് 18-22 തീയതികളിൽ നടത്തും. എല്ലാ ആവശ്യമായ രേഖകളും തയ്യാറാക്കി വയ്ക്കുക.
+
+Issued by: Internal Audit Department
+Approved by: Chief Internal Auditor
+
+---
+Generated on: 2025-09-19 18:59:29
+Document Management System - Synthetic Data

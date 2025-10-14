@@ -1,0 +1,57 @@
+
+DOCUMENT INFORMATION
+===================
+Document ID: DOC-003
+Department: Procurement
+Sub-Department: Purchase Orders
+Desk: PO Desk
+Sub-Desk: International PO
+
+DOCUMENT CONTENT
+================
+
+**INTERNATIONAL PURCHASE ORDER**
+PO Number: PO-INT-2024-156
+Date: March 3, 2024
+Currency: USD
+
+**Vendor Information:**
+Company: GlobalTech Manufacturing Ltd
+Address: 123 Industrial Park, Singapore 123456
+Contact: procurement@globaltech.sg
+Phone: +65-6123-4567
+
+**Shipping Details:**
+Ship To: Mumbai Port, India
+Delivery Terms: CIF Mumbai
+Expected Delivery: April 15, 2024
+
+**Item Details:**
+| Item Code | Description | Qty | Unit Price (USD) | Total (USD) |
+|-----------|-------------|-----|------------------|-------------|
+| GT-5001 | Industrial Sensors | 100 | $125.00 | $12,500.00 |
+| GT-5002 | Control Modules | 50 | $89.50 | $4,475.00 |
+| GT-5003 | Communication Cards | 25 | $156.00 | $3,900.00 |
+
+**Total Order Value:** $20,875.00
+**Exchange Rate Applied:** 1 USD = ₹83.25
+**Total in INR:** ₹17,37,843.75
+
+**Payment Terms:** Letter of Credit (LC) - 30 days
+**LC Bank:** State Bank of India, Mumbai Branch
+**LC Number:** LC-SBI-2024-789
+
+**Special Instructions:**
+- All items must be CE certified
+- Packing list required in triplicate
+- Insurance coverage minimum $25,000
+- Quality inspection at port of destination
+
+**അന്താരാഷ്ട്ര വാങ്ങൽ ഉത്തരവ്:** ഈ ഉത്തരവ് സ്വീകരിച്ചതായി 48 മണിക്കൂറിനുള്ളിൽ സ്ഥിരീകരിക്കുക.
+
+Authorized by: [Digital Signature]
+Procurement Manager
+
+---
+Generated on: 2025-09-19 18:59:29
+Document Management System - Synthetic Data

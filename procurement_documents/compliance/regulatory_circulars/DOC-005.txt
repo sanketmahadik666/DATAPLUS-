@@ -1,0 +1,57 @@
+
+DOCUMENT INFORMATION
+===================
+Document ID: DOC-005
+Department: Procurement
+Sub-Department: Compliance Notices
+Desk: Compliance Desk
+Sub-Desk: Regulatory Circulars
+
+DOCUMENT CONTENT
+================
+
+**REGULATORY COMPLIANCE CIRCULAR**
+Circular ID: COMP-2024-012
+Issue Date: March 7, 2024
+Effective Date: April 1, 2024
+
+**Subject:** Updated GST Compliance Requirements for Procurement
+
+**Dear Procurement Team,**
+
+The Ministry of Finance has issued new guidelines regarding GST compliance for all procurement activities. Please ensure strict adherence to the following requirements:
+
+**New Requirements:**
+1. **E-Invoicing Mandate:** All invoices above ₹10,000 must be e-invoiced
+2. **HSN Code Verification:** Verify 6-digit HSN codes for all purchases
+3. **Reverse Charge Mechanism:** Applicable for services from unregistered vendors
+4. **TDS Compliance:** 2% TDS on payments above ₹30,000 to vendors
+
+**Implementation Timeline:**
+- Phase 1 (April 1-15): System updates and testing
+- Phase 2 (April 16-30): Staff training and documentation
+- Phase 3 (May 1 onwards): Full implementation
+
+**Action Items:**
+• Update vendor master data with GSTIN validation
+• Modify PO templates to include HSN codes
+• Train procurement staff on new requirements
+• Update payment processing workflows
+
+**Penalties for Non-Compliance:**
+- Late filing: ₹200 per day
+- Incorrect returns: ₹10,000 minimum
+- Non-registration: ₹10,000 per month
+
+**Contact for Queries:**
+Compliance Team: compliance@company.com
+GST Helpline: +91-1800-1200-232
+
+**മലയാളം:** ഈ പുതിയ GST നിയമങ്ങൾ ഏപ്രിൽ 1 മുതൽ ബാധകമാണ്. എല്ലാ വാങ്ങൽ പ്രവർത്തനങ്ങളും ഈ നിയമങ്ങൾ പാലിക്കണം.
+
+Issued by: Compliance Department
+Approved by: Chief Financial Officer
+
+---
+Generated on: 2025-09-19 18:59:29
+Document Management System - Synthetic Data

@@ -1,0 +1,81 @@
+
+DOCUMENT INFORMATION
+===================
+Document ID: DOC-012
+Department: Procurement
+Sub-Department: Vendor Management
+Desk: Vendor Desk
+Sub-Desk: Vendor Registration
+
+DOCUMENT CONTENT
+================
+
+**VENDOR BLACKLIST NOTICE**
+Notice ID: VND-BL-2024-003
+Date: March 13, 2024
+Effective Date: March 15, 2024
+
+**Vendor Information:**
+Vendor Code: VND-2022-234
+Company Name: QuickSupplies Ltd
+Registration Number: U74999DL2022PTC098765
+Category: Office Supplies
+
+**Reason for Blacklisting:**
+The vendor has been blacklisted due to multiple violations of our procurement policies and contractual obligations.
+
+**Violations Identified:**
+1. **Quality Issues:**
+   - Delivered substandard products on 3 occasions
+   - Failed quality inspection in December 2023
+   - Refused to replace defective items
+
+2. **Delivery Performance:**
+   - 45% on-time delivery rate (below 90% requirement)
+   - Multiple delivery delays without prior notice
+   - Incomplete deliveries on 5 occasions
+
+3. **Contractual Breaches:**
+   - Unauthorized price increases without notice
+   - Failure to provide required documentation
+   - Non-compliance with payment terms
+
+4. **Communication Issues:**
+   - Poor response to queries and complaints
+   - Unprofessional behavior with procurement staff
+   - Failure to attend scheduled meetings
+
+**Actions Taken:**
+- Contract terminated with immediate effect
+- Outstanding payments suspended pending resolution
+- Legal notice served for breach of contract
+- Quality issues reported to relevant authorities
+
+**Blacklist Duration:** 2 years (March 15, 2024 - March 14, 2026)
+
+**Impact on Business:**
+- Alternative vendors identified and onboarded
+- No disruption to ongoing operations
+- Cost impact: Minimal (5% increase with new vendors)
+
+**Appeal Process:**
+The vendor may appeal this decision within 30 days by submitting:
+- Detailed explanation of violations
+- Corrective action plan
+- Performance guarantees
+- Financial security deposit
+
+**Distribution:**
+- All procurement staff
+- Finance department
+- Legal department
+- Vendor management system
+
+**മലയാളം:** ഈ വെണ്ടർ മാർച്ച് 15 മുതൽ 2 വർഷത്തേക്ക് ബ്ലാക്ക്ലിസ്റ്റ് ചെയ്യപ്പെട്ടിരിക്കുന്നു.
+
+Issued by: Vendor Management Team
+Approved by: Procurement Head
+
+---
+Generated on: 2025-09-19 18:59:29
+Document Management System - Synthetic Data
