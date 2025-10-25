@@ -1,0 +1,512 @@
+{
+  "metadata": {
+    "algorithm": "enhanced_naive_bayes_with_phase3_gpu",
+    "timestamp_utc": "2025-10-25T11:24:50.365681Z",
+    "phase3_enabled": true,
+    "alpha": 1.0,
+    "beta": 0.5,
+    "gamma": 0.5,
+    "delta_fallback_threshold": 0.03
+  },
+  "model_summary": {
+    "features_used": [
+      "page_count",
+      "text_density",
+      "has_tables",
+      "gpu_accelerated_processing",
+      "gpu_boost_available",
+      "processing_speed_boost",
+      "gpu_enhanced_accuracy",
+      "feature_confidence",
+      "deep_features_extracted"
+    ],
+    "class_priors": {
+      "tesseract_standard": 0.16666666666666666,
+      "tesseract_form_trained": 0.16666666666666666,
+      "paddle_malayalam": 0.22666666666666666,
+      "donut_tabular": 0.19333333333333336,
+      "easyocr": 0.16666666666666666
+    },
+    "numeric_stats": {
+      "page_count": {
+        "paddle_malayalam": {
+          "mean": 1.0,
+          "variance": 1e-06
+        },
+        "donut_tabular": {
+          "mean": 1.0,
+          "variance": 1e-06
+        }
+      },
+      "text_density": {
+        "paddle_malayalam": {
+          "mean": 566.6666666666666,
+          "variance": 3888.888888888889
+        },
+        "donut_tabular": {
+          "mean": 525.0,
+          "variance": 5625.0
+        }
+      },
+      "has_tables": {
+        "paddle_malayalam": {
+          "mean": 0.0,
+          "variance": 1e-06
+        },
+        "donut_tabular": {
+          "mean": 1.0,
+          "variance": 1e-06
+        }
+      },
+      "gpu_accelerated_processing": {
+        "paddle_malayalam": {
+          "mean": 1.0,
+          "variance": 1e-06
+        },
+        "donut_tabular": {
+          "mean": 1.0,
+          "variance": 1e-06
+        }
+      },
+      "gpu_boost_available": {
+        "paddle_malayalam": {
+          "mean": 1.0,
+          "variance": 1e-06
+        },
+        "donut_tabular": {
+          "mean": 1.0,
+          "variance": 1e-06
+        }
+      },
+      "processing_speed_boost": {
+        "paddle_malayalam": {
+          "mean": 2.4999999999999996,
+          "variance": 1e-06
+        },
+        "donut_tabular": {
+          "mean": 2.5,
+          "variance": 1e-06
+        }
+      },
+      "gpu_enhanced_accuracy": {
+        "paddle_malayalam": {
+          "mean": 0.7166666666666668,
+          "variance": 0.0038888888888888896
+        },
+        "donut_tabular": {
+          "mean": 0.6749999999999999,
+          "variance": 0.0056250000000000015
+        }
+      },
+      "feature_confidence": {
+        "paddle_malayalam": {
+          "mean": 0.9999999999999999,
+          "variance": 1e-06
+        },
+        "donut_tabular": {
+          "mean": 0.9999999999999999,
+          "variance": 1e-06
+        }
+      },
+      "deep_features_extracted": {
+        "paddle_malayalam": {
+          "mean": 1.0,
+          "variance": 1e-06
+        },
+        "donut_tabular": {
+          "mean": 1.0,
+          "variance": 1e-06
+        }
+      }
+    },
+    "categorical_stats": {},
+    "deep_feature_weights": {
+      "tesseract_standard": 0.5,
+      "tesseract_form_trained": 0.5,
+      "paddle_malayalam": 0.96,
+      "donut_tabular": 0.96,
+      "easyocr": 0.5
+    },
+    "phase3_enhancements": {
+      "gpu_accelerated_documents": 5,
+      "deep_features_available": true,
+      "enhanced_features": 9
+    }
+  },
+  "routing_results": {
+    "routing_predictions": [
+      {
+        "document_id": "mock_doc_1",
+        "phase3_enhanced": true,
+        "gpu_accelerated": true,
+        "deep_features_used": true,
+        "posteriors": {
+          "tesseract_standard": 2.7207494347480437e-17,
+          "tesseract_form_trained": 2.7207494347480437e-17,
+          "paddle_malayalam": 0.0,
+          "donut_tabular": 0.9999999999999999,
+          "easyocr": 2.7207494347480437e-17
+        },
+        "utility_scores": {
+          "tesseract_standard": -0.09999999999999999,
+          "tesseract_form_trained": -0.22833333333333333,
+          "paddle_malayalam": -0.1683333333333333,
+          "donut_tabular": 0.16999999999999987,
+          "easyocr": -0.20666666666666667
+        },
+        "chosen_engine": "donut_tabular",
+        "fallback_candidates": [],
+        "expected_latency_sec": 0.8099999999999999,
+        "expected_accuracy": 1.0,
+        "confidence_score": 0.9999999999999999,
+        "preprocessing_recommendations": [
+          {
+            "step": "gpu_optimization",
+            "reason": "GPU processing available for enhanced accuracy",
+            "impact": "high",
+            "engine_benefit": "donut_tabular"
+          },
+          {
+            "step": "semantic_enhancement",
+            "reason": "Deep features available for intelligent preprocessing",
+            "impact": "medium",
+            "engine_benefit": "all"
+          },
+          {
+            "step": "table_extraction",
+            "reason": "Table-specific OCR engine selected",
+            "impact": "high",
+            "engine_benefit": "donut_tabular"
+          }
+        ],
+        "reasoning": "Selected donut_tabular due to very high confidence, GPU processing available and utilized, deep feature analysis enabled, optimal for tables",
+        "performance_estimate": {
+          "speed_boost": 2.5,
+          "quality_improvement": 0.14999999999999997
+        }
+      },
+      {
+        "document_id": "mock_doc_2",
+        "phase3_enhanced": true,
+        "gpu_accelerated": true,
+        "deep_features_used": true,
+        "posteriors": {
+          "tesseract_standard": 1.8507710834702177e-17,
+          "tesseract_form_trained": 1.8507710834702177e-17,
+          "paddle_malayalam": 1.0,
+          "donut_tabular": 0.0,
+          "easyocr": 1.8507710834702177e-17
+        },
+        "utility_scores": {
+          "tesseract_standard": -0.09999999999999999,
+          "tesseract_form_trained": -0.22833333333333333,
+          "paddle_malayalam": 0.8316666666666668,
+          "donut_tabular": -0.8300000000000001,
+          "easyocr": -0.20666666666666667
+        },
+        "chosen_engine": "paddle_malayalam",
+        "fallback_candidates": [],
+        "expected_latency_sec": 0.27,
+        "expected_accuracy": 1.0,
+        "confidence_score": 1.0,
+        "preprocessing_recommendations": [
+          {
+            "step": "gpu_optimization",
+            "reason": "GPU processing available for enhanced accuracy",
+            "impact": "high",
+            "engine_benefit": "paddle_malayalam"
+          },
+          {
+            "step": "semantic_enhancement",
+            "reason": "Deep features available for intelligent preprocessing",
+            "impact": "medium",
+            "engine_benefit": "all"
+          }
+        ],
+        "reasoning": "Selected paddle_malayalam due to very high confidence, GPU processing available and utilized, deep feature analysis enabled, excellent utility score across accuracy, speed, and cost",
+        "performance_estimate": {
+          "speed_boost": 2.5,
+          "quality_improvement": 0.15000000000000002
+        }
+      },
+      {
+        "document_id": "mock_doc_3",
+        "phase3_enhanced": true,
+        "gpu_accelerated": true,
+        "deep_features_used": true,
+        "posteriors": {
+          "tesseract_standard": 6.339239925495359e-18,
+          "tesseract_form_trained": 6.339239925495359e-18,
+          "paddle_malayalam": 1.0,
+          "donut_tabular": 0.0,
+          "easyocr": 6.339239925495359e-18
+        },
+        "utility_scores": {
+          "tesseract_standard": -0.10000000000000002,
+          "tesseract_form_trained": -0.22833333333333333,
+          "paddle_malayalam": 0.8316666666666668,
+          "donut_tabular": -0.8300000000000001,
+          "easyocr": -0.20666666666666667
+        },
+        "chosen_engine": "paddle_malayalam",
+        "fallback_candidates": [],
+        "expected_latency_sec": 0.27,
+        "expected_accuracy": 1.0,
+        "confidence_score": 1.0,
+        "preprocessing_recommendations": [
+          {
+            "step": "gpu_optimization",
+            "reason": "GPU processing available for enhanced accuracy",
+            "impact": "high",
+            "engine_benefit": "paddle_malayalam"
+          },
+          {
+            "step": "semantic_enhancement",
+            "reason": "Deep features available for intelligent preprocessing",
+            "impact": "medium",
+            "engine_benefit": "all"
+          },
+          {
+            "step": "language_detection",
+            "reason": "Multi-language OCR engine selected",
+            "impact": "high",
+            "engine_benefit": "paddle_malayalam"
+          }
+        ],
+        "reasoning": "Selected paddle_malayalam due to very high confidence, GPU processing available and utilized, deep feature analysis enabled, excellent utility score across accuracy, speed, and cost",
+        "performance_estimate": {
+          "speed_boost": 2.5,
+          "quality_improvement": 0.15000000000000002
+        }
+      },
+      {
+        "document_id": "mock_doc_4",
+        "phase3_enhanced": true,
+        "gpu_accelerated": true,
+        "deep_features_used": true,
+        "posteriors": {
+          "tesseract_standard": 2.7207494347480437e-17,
+          "tesseract_form_trained": 2.7207494347480437e-17,
+          "paddle_malayalam": 0.0,
+          "donut_tabular": 0.9999999999999999,
+          "easyocr": 2.7207494347480437e-17
+        },
+        "utility_scores": {
+          "tesseract_standard": -0.09999999999999999,
+          "tesseract_form_trained": -0.22833333333333333,
+          "paddle_malayalam": -0.1683333333333333,
+          "donut_tabular": 0.16999999999999987,
+          "easyocr": -0.20666666666666667
+        },
+        "chosen_engine": "donut_tabular",
+        "fallback_candidates": [],
+        "expected_latency_sec": 0.8099999999999999,
+        "expected_accuracy": 1.0,
+        "confidence_score": 0.9999999999999999,
+        "preprocessing_recommendations": [
+          {
+            "step": "gpu_optimization",
+            "reason": "GPU processing available for enhanced accuracy",
+            "impact": "high",
+            "engine_benefit": "donut_tabular"
+          },
+          {
+            "step": "semantic_enhancement",
+            "reason": "Deep features available for intelligent preprocessing",
+            "impact": "medium",
+            "engine_benefit": "all"
+          },
+          {
+            "step": "table_extraction",
+            "reason": "Table-specific OCR engine selected",
+            "impact": "high",
+            "engine_benefit": "donut_tabular"
+          }
+        ],
+        "reasoning": "Selected donut_tabular due to very high confidence, GPU processing available and utilized, deep feature analysis enabled, optimal for tables",
+        "performance_estimate": {
+          "speed_boost": 2.5,
+          "quality_improvement": 0.15000000000000002
+        }
+      },
+      {
+        "document_id": "mock_doc_5",
+        "phase3_enhanced": true,
+        "gpu_accelerated": true,
+        "deep_features_used": true,
+        "posteriors": {
+          "tesseract_standard": 3.519994745965282e-17,
+          "tesseract_form_trained": 3.519994745965282e-17,
+          "paddle_malayalam": 0.9999999999999998,
+          "donut_tabular": 0.0,
+          "easyocr": 3.519994745965282e-17
+        },
+        "utility_scores": {
+          "tesseract_standard": -0.09999999999999999,
+          "tesseract_form_trained": -0.22833333333333333,
+          "paddle_malayalam": 0.8316666666666666,
+          "donut_tabular": -0.8300000000000001,
+          "easyocr": -0.20666666666666667
+        },
+        "chosen_engine": "paddle_malayalam",
+        "fallback_candidates": [],
+        "expected_latency_sec": 0.27,
+        "expected_accuracy": 1.0,
+        "confidence_score": 0.9999999999999998,
+        "preprocessing_recommendations": [
+          {
+            "step": "gpu_optimization",
+            "reason": "GPU processing available for enhanced accuracy",
+            "impact": "high",
+            "engine_benefit": "paddle_malayalam"
+          },
+          {
+            "step": "semantic_enhancement",
+            "reason": "Deep features available for intelligent preprocessing",
+            "impact": "medium",
+            "engine_benefit": "all"
+          }
+        ],
+        "reasoning": "Selected paddle_malayalam due to very high confidence, GPU processing available and utilized, deep feature analysis enabled, excellent utility score across accuracy, speed, and cost",
+        "performance_estimate": {
+          "speed_boost": 2.5,
+          "quality_improvement": 0.15000000000000002
+        }
+      }
+    ],
+    "phase3_metadata": {
+      "gpu_accelerated_count": 5,
+      "deep_features_count": 5,
+      "enhanced_routing": true
+    }
+  },
+  "analytics": {
+    "total_predictions": 5,
+    "engine_distribution": {
+      "donut_tabular": 2,
+      "paddle_malayalam": 3
+    },
+    "gpu_accelerated_predictions": 5,
+    "deep_features_used": 5,
+    "average_confidence": 1.0,
+    "phase3_enhancement_rate": 2.0
+  },
+  "engine_specs": {
+    "tesseract_standard": {
+      "latency_baseline": 0.8,
+      "resource_cost": 1.0,
+      "accuracy_profile": {
+        "general_text": 0.85,
+        "forms": 0.75,
+        "tables": 0.7,
+        "handwriting": 0.6,
+        "multilingual": 0.8
+      },
+      "strengths": [
+        "general_text",
+        "speed"
+      ],
+      "weaknesses": [
+        "tables",
+        "handwriting"
+      ],
+      "gpu_accelerated": false,
+      "preprocessing_boost": 1.0
+    },
+    "tesseract_form_trained": {
+      "latency_baseline": 1.0,
+      "resource_cost": 1.2,
+      "accuracy_profile": {
+        "general_text": 0.82,
+        "forms": 0.88,
+        "tables": 0.75,
+        "handwriting": 0.65,
+        "multilingual": 0.78
+      },
+      "strengths": [
+        "forms",
+        "structured_content"
+      ],
+      "weaknesses": [
+        "speed",
+        "handwriting"
+      ],
+      "gpu_accelerated": false,
+      "preprocessing_boost": 1.1
+    },
+    "paddle_malayalam": {
+      "latency_baseline": 0.5,
+      "resource_cost": 3.0,
+      "accuracy_profile": {
+        "general_text": 0.9,
+        "forms": 0.85,
+        "tables": 0.82,
+        "handwriting": 0.75,
+        "multilingual": 0.95
+      },
+      "strengths": [
+        "multilingual",
+        "tables",
+        "gpu_acceleration"
+      ],
+      "weaknesses": [
+        "resource_intensive"
+      ],
+      "gpu_accelerated": true,
+      "preprocessing_boost": 1.3
+    },
+    "donut_tabular": {
+      "latency_baseline": 1.5,
+      "resource_cost": 4.0,
+      "accuracy_profile": {
+        "general_text": 0.8,
+        "forms": 0.78,
+        "tables": 0.92,
+        "handwriting": 0.7,
+        "multilingual": 0.85
+      },
+      "strengths": [
+        "tables",
+        "structured_data"
+      ],
+      "weaknesses": [
+        "speed",
+        "resource_intensive"
+      ],
+      "gpu_accelerated": true,
+      "preprocessing_boost": 1.4
+    },
+    "easyocr": {
+      "latency_baseline": 1.0,
+      "resource_cost": 1.1,
+      "accuracy_profile": {
+        "general_text": 0.83,
+        "forms": 0.8,
+        "tables": 0.76,
+        "handwriting": 0.82,
+        "multilingual": 0.9
+      },
+      "strengths": [
+        "handwriting",
+        "multilingual"
+      ],
+      "weaknesses": [
+        "tables",
+        "speed"
+      ],
+      "gpu_accelerated": false,
+      "preprocessing_boost": 1.2
+    }
+  },
+  "enhancement_summary": {
+    "gpu_accelerated_engines": [
+      "paddle_malayalam",
+      "donut_tabular"
+    ],
+    "phase3_feature_boost": "enabled",
+    "deep_feature_integration": true,
+    "enhanced_preprocessing": true
+  },
+  "stored_at": "2025-10-25T16:54:50.366329",
+  "batch_id": "demo_routing_1761391490"
+}

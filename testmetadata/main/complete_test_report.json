@@ -1,0 +1,19 @@
+{
+  "test_timestamp": "/home/sanket/Data-pulse/testApp/DATAPLUS-/testmetadata/main",
+  "phase2_tests": true,
+  "phase3_tests": true,
+  "integration_tests": false,
+  "test_data_used": "ocr_routing_pipeline/test_data",
+  "phase2_summary": {
+    "documents_processed": 5,
+    "features_used": 14,
+    "routing_accuracy": 1.0
+  },
+  "phase3_summary": {
+    "documents_processed": 1489,
+    "gpu_accelerated_count": 0,
+    "deep_features_count": 0,
+    "enhanced_routing": true
+  },
+  "comparison": {}
+}

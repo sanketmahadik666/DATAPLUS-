@@ -1,0 +1,566 @@
+{
+  "metadata": {
+    "algorithm": "naive_bayes_with_utility",
+    "alpha": 1.0,
+    "beta": 0.5,
+    "gamma": 0.5,
+    "delta_fallback_threshold": 0.03,
+    "engine_latency_baseline": {
+      "tesseract_standard": 0.8,
+      "tesseract_form_trained": 1.0,
+      "paddle_malayalam": 0.5,
+      "donut_tabular": 1.5,
+      "easyocr": 1.0
+    },
+    "engine_resource_baseline": {
+      "tesseract_standard": 1.0,
+      "tesseract_form_trained": 1.2,
+      "paddle_malayalam": 3.0,
+      "donut_tabular": 4.0,
+      "easyocr": 1.1
+    },
+    "timestamp_utc": "2025-10-25T11:43:41.750077Z"
+  },
+  "features_used": [
+    "page_count",
+    "total_characters",
+    "total_words",
+    "text_density",
+    "aspect_ratio",
+    "has_tables",
+    "has_numbers",
+    "has_currency",
+    "brightness_mean",
+    "has_annotations",
+    "has_images",
+    "has_forms",
+    "contrast",
+    "has_dates"
+  ],
+  "model_summary": {
+    "class_priors": {
+      "tesseract_standard": 0.7349397590361446,
+      "tesseract_form_trained": 0.008701472556894244,
+      "paddle_malayalam": 0.002008032128514056,
+      "donut_tabular": 0.008701472556894244,
+      "easyocr": 0.24564926372155288
+    },
+    "numeric_stats": {
+      "page_count": {
+        "tesseract_standard": {
+          "mean": 1.0,
+          "variance": 1e-06
+        },
+        "tesseract_form_trained": {
+          "mean": 1.0,
+          "variance": 1e-06
+        },
+        "paddle_malayalam": {
+          "mean": 1.0,
+          "variance": 1e-06
+        },
+        "donut_tabular": {
+          "mean": 1.0,
+          "variance": 1e-06
+        },
+        "easyocr": {
+          "mean": 1.0,
+          "variance": 1e-06
+        }
+      },
+      "total_characters": {
+        "tesseract_standard": {
+          "mean": 75745.031905196,
+          "variance": 1864504262.0090094
+        },
+        "tesseract_form_trained": {
+          "mean": 85758.33333333333,
+          "variance": 546360763.888889
+        },
+        "paddle_malayalam": {
+          "mean": 68100.0,
+          "variance": 2500000000.0
+        },
+        "donut_tabular": {
+          "mean": 84908.33333333333,
+          "variance": 538835763.888889
+        },
+        "easyocr": {
+          "mean": 75788.52459016393,
+          "variance": 1872678283.6155155
+        }
+      },
+      "total_words": {
+        "tesseract_standard": {
+          "mean": 15099.006381039198,
+          "variance": 74580170.48036037
+        },
+        "tesseract_form_trained": {
+          "mean": 17101.666666666668,
+          "variance": 21854430.555555556
+        },
+        "paddle_malayalam": {
+          "mean": 13570.0,
+          "variance": 100000000.0
+        },
+        "donut_tabular": {
+          "mean": 16931.666666666668,
+          "variance": 21553430.555555556
+        },
+        "easyocr": {
+          "mean": 15107.704918032787,
+          "variance": 74907131.34462062
+        }
+      },
+      "text_density": {
+        "tesseract_standard": {
+          "mean": 37422.515952598,
+          "variance": 466126065.50225234
+        },
+        "tesseract_form_trained": {
+          "mean": 42429.166666666664,
+          "variance": 136590190.97222224
+        },
+        "paddle_malayalam": {
+          "mean": 33600.0,
+          "variance": 625000000.0
+        },
+        "donut_tabular": {
+          "mean": 42004.166666666664,
+          "variance": 134708940.97222224
+        },
+        "easyocr": {
+          "mean": 37444.262295081964,
+          "variance": 468169570.90387887
+        }
+      },
+      "aspect_ratio": {
+        "tesseract_standard": {
+          "mean": 75.64503190519599,
+          "variance": 1864.5042620090098
+        },
+        "tesseract_form_trained": {
+          "mean": 85.65833333333335,
+          "variance": 546.3607638888891
+        },
+        "paddle_malayalam": {
+          "mean": 68.0,
+          "variance": 2500.000000000001
+        },
+        "donut_tabular": {
+          "mean": 84.80833333333335,
+          "variance": 538.835763888889
+        },
+        "easyocr": {
+          "mean": 75.68852459016395,
+          "variance": 1872.6782836155155
+        }
+      },
+      "has_tables": {
+        "tesseract_standard": {
+          "mean": 0.33272561531449407,
+          "variance": 0.22201928022808537
+        },
+        "tesseract_form_trained": {
+          "mean": 0.25,
+          "variance": 0.1875
+        },
+        "paddle_malayalam": {
+          "mean": 0.0,
+          "variance": 1e-06
+        },
+        "donut_tabular": {
+          "mean": 0.4166666666666667,
+          "variance": 0.24305555555555555
+        },
+        "easyocr": {
+          "mean": 0.33879781420765026,
+          "variance": 0.2240138552957688
+        }
+      },
+      "has_numbers": {
+        "tesseract_standard": {
+          "mean": 1.0,
+          "variance": 1e-06
+        },
+        "tesseract_form_trained": {
+          "mean": 1.0,
+          "variance": 1e-06
+        },
+        "paddle_malayalam": {
+          "mean": 1.0,
+          "variance": 1e-06
+        },
+        "donut_tabular": {
+          "mean": 1.0,
+          "variance": 1e-06
+        },
+        "easyocr": {
+          "mean": 1.0,
+          "variance": 1e-06
+        }
+      },
+      "has_currency": {
+        "tesseract_standard": {
+          "mean": 0.33454876937101186,
+          "variance": 0.22262589028335336
+        },
+        "tesseract_form_trained": {
+          "mean": 0.25,
+          "variance": 0.1875
+        },
+        "paddle_malayalam": {
+          "mean": 0.0,
+          "variance": 1e-06
+        },
+        "donut_tabular": {
+          "mean": 0.16666666666666666,
+          "variance": 0.13888888888888887
+        },
+        "easyocr": {
+          "mean": 0.0,
+          "variance": 1e-06
+        }
+      },
+      "brightness_mean": {
+        "tesseract_standard": {
+          "mean": 3892.2515952597996,
+          "variance": 4661260.655022523
+        },
+        "tesseract_form_trained": {
+          "mean": 4392.916666666667,
+          "variance": 1365901.9097222222
+        },
+        "paddle_malayalam": {
+          "mean": 3510.0,
+          "variance": 6250000.0
+        },
+        "donut_tabular": {
+          "mean": 4350.416666666667,
+          "variance": 1347089.4097222222
+        },
+        "easyocr": {
+          "mean": 3894.4262295081967,
+          "variance": 4681695.709038788
+        }
+      },
+      "has_annotations": {
+        "tesseract_standard": {
+          "mean": 0.1431175934366454,
+          "variance": 0.12263494788554843
+        },
+        "tesseract_form_trained": {
+          "mean": 0.16666666666666666,
+          "variance": 0.1388888888888889
+        },
+        "paddle_malayalam": {
+          "mean": 0.0,
+          "variance": 1e-06
+        },
+        "donut_tabular": {
+          "mean": 0.08333333333333333,
+          "variance": 0.07638888888888887
+        },
+        "easyocr": {
+          "mean": 0.1448087431693989,
+          "variance": 0.12383917107109797
+        }
+      },
+      "has_images": {
+        "tesseract_standard": {
+          "mean": 0.22151321786690975,
+          "variance": 0.17244511217715675
+        },
+        "tesseract_form_trained": {
+          "mean": 0.16666666666666666,
+          "variance": 0.1388888888888889
+        },
+        "paddle_malayalam": {
+          "mean": 0.0,
+          "variance": 1e-06
+        },
+        "donut_tabular": {
+          "mean": 0.25,
+          "variance": 0.1875
+        },
+        "easyocr": {
+          "mean": 0.0,
+          "variance": 1e-06
+        }
+      },
+      "has_forms": {
+        "tesseract_standard": {
+          "mean": 0.0,
+          "variance": 1e-06
+        },
+        "tesseract_form_trained": {
+          "mean": 0.3333333333333333,
+          "variance": 0.22222222222222224
+        },
+        "paddle_malayalam": {
+          "mean": 0.0,
+          "variance": 1e-06
+        },
+        "donut_tabular": {
+          "mean": 0.25,
+          "variance": 0.1875
+        },
+        "easyocr": {
+          "mean": 1.0,
+          "variance": 1e-06
+        }
+      },
+      "contrast": {
+        "tesseract_standard": {
+          "mean": 1544.9006381039198,
+          "variance": 745801.7048036037
+        },
+        "tesseract_form_trained": {
+          "mean": 1745.1666666666667,
+          "variance": 218544.3055555556
+        },
+        "paddle_malayalam": {
+          "mean": 1392.0,
+          "variance": 1000000.0
+        },
+        "donut_tabular": {
+          "mean": 1728.1666666666667,
+          "variance": 215534.3055555556
+        },
+        "easyocr": {
+          "mean": 1545.7704918032787,
+          "variance": 749071.3134462062
+        }
+      },
+      "has_dates": {
+        "tesseract_standard": {
+          "mean": 0.19963536918869645,
+          "variance": 0.1597810885575893
+        },
+        "tesseract_form_trained": {
+          "mean": 0.16666666666666666,
+          "variance": 0.1388888888888889
+        },
+        "paddle_malayalam": {
+          "mean": 0.0,
+          "variance": 1e-06
+        },
+        "donut_tabular": {
+          "mean": 0.3333333333333333,
+          "variance": 0.22222222222222224
+        },
+        "easyocr": {
+          "mean": 0.1994535519125683,
+          "variance": 0.1596718325420287
+        }
+      }
+    },
+    "categorical_stats": {}
+  },
+  "documents": [
+    {
+      "document_id": "test_doc_1",
+      "posteriors": {
+        "tesseract_standard": 0.0,
+        "tesseract_form_trained": 2.8383387448429044e-22,
+        "paddle_malayalam": 0.0,
+        "donut_tabular": 4.747184406749678e-22,
+        "easyocr": 1.0
+      },
+      "normalized_latency": {
+        "tesseract_standard": 0.30000000000000004,
+        "tesseract_form_trained": 0.5,
+        "paddle_malayalam": 0.0,
+        "donut_tabular": 1.0,
+        "easyocr": 0.5
+      },
+      "normalized_resource_cost": {
+        "tesseract_standard": 0.0,
+        "tesseract_form_trained": 0.06666666666666665,
+        "paddle_malayalam": 0.6666666666666666,
+        "donut_tabular": 1.0,
+        "easyocr": 0.03333333333333336
+      },
+      "utility_scores": {
+        "tesseract_standard": -0.15000000000000002,
+        "tesseract_form_trained": -0.2833333333333333,
+        "paddle_malayalam": -0.3333333333333333,
+        "donut_tabular": -1.0,
+        "easyocr": 0.7333333333333333
+      },
+      "chosen_engine": "easyocr",
+      "fallback_candidates": [],
+      "expected_latency_sec": 1.0,
+      "expected_confidence": 1.0,
+      "preprocessing_recommendation": [
+        "table_extraction"
+      ],
+      "reason": "Selected easyocr due to high confidence, contains tables, contains forms"
+    },
+    {
+      "document_id": "test_doc_2",
+      "posteriors": {
+        "tesseract_standard": 0.9999999999999999,
+        "tesseract_form_trained": 1.0635702993585189e-16,
+        "paddle_malayalam": 0.0,
+        "donut_tabular": 1.9215350651370196e-18,
+        "easyocr": 0.0
+      },
+      "normalized_latency": {
+        "tesseract_standard": 0.30000000000000004,
+        "tesseract_form_trained": 0.5,
+        "paddle_malayalam": 0.0,
+        "donut_tabular": 1.0,
+        "easyocr": 0.5
+      },
+      "normalized_resource_cost": {
+        "tesseract_standard": 0.0,
+        "tesseract_form_trained": 0.06666666666666665,
+        "paddle_malayalam": 0.6666666666666666,
+        "donut_tabular": 1.0,
+        "easyocr": 0.03333333333333336
+      },
+      "utility_scores": {
+        "tesseract_standard": 0.8499999999999999,
+        "tesseract_form_trained": -0.2833333333333332,
+        "paddle_malayalam": -0.3333333333333333,
+        "donut_tabular": -1.0,
+        "easyocr": -0.26666666666666666
+      },
+      "chosen_engine": "tesseract_standard",
+      "fallback_candidates": [],
+      "expected_latency_sec": 0.8,
+      "expected_confidence": 0.9999999999999999,
+      "preprocessing_recommendation": [
+        "signature_crop"
+      ],
+      "reason": "Selected tesseract_standard due to high confidence"
+    },
+    {
+      "document_id": "test_doc_3",
+      "posteriors": {
+        "tesseract_standard": 0.9999999999999994,
+        "tesseract_form_trained": 7.334741563231383e-17,
+        "paddle_malayalam": 0.0,
+        "donut_tabular": 4.254236769974188e-16,
+        "easyocr": 0.0
+      },
+      "normalized_latency": {
+        "tesseract_standard": 0.30000000000000004,
+        "tesseract_form_trained": 0.5,
+        "paddle_malayalam": 0.0,
+        "donut_tabular": 1.0,
+        "easyocr": 0.5
+      },
+      "normalized_resource_cost": {
+        "tesseract_standard": 0.0,
+        "tesseract_form_trained": 0.06666666666666665,
+        "paddle_malayalam": 0.6666666666666666,
+        "donut_tabular": 1.0,
+        "easyocr": 0.03333333333333336
+      },
+      "utility_scores": {
+        "tesseract_standard": 0.8499999999999994,
+        "tesseract_form_trained": -0.2833333333333332,
+        "paddle_malayalam": -0.3333333333333333,
+        "donut_tabular": -0.9999999999999996,
+        "easyocr": -0.26666666666666666
+      },
+      "chosen_engine": "tesseract_standard",
+      "fallback_candidates": [],
+      "expected_latency_sec": 0.8,
+      "expected_confidence": 0.9999999999999994,
+      "preprocessing_recommendation": [],
+      "reason": "Selected tesseract_standard due to high confidence"
+    },
+    {
+      "document_id": "test_doc_4",
+      "posteriors": {
+        "tesseract_standard": 0.9999999999999998,
+        "tesseract_form_trained": 3.374458465281641e-17,
+        "paddle_malayalam": 0.0,
+        "donut_tabular": 2.941774013461314e-16,
+        "easyocr": 0.0
+      },
+      "normalized_latency": {
+        "tesseract_standard": 0.30000000000000004,
+        "tesseract_form_trained": 0.5,
+        "paddle_malayalam": 0.0,
+        "donut_tabular": 1.0,
+        "easyocr": 0.5
+      },
+      "normalized_resource_cost": {
+        "tesseract_standard": 0.0,
+        "tesseract_form_trained": 0.06666666666666665,
+        "paddle_malayalam": 0.6666666666666666,
+        "donut_tabular": 1.0,
+        "easyocr": 0.03333333333333336
+      },
+      "utility_scores": {
+        "tesseract_standard": 0.8499999999999998,
+        "tesseract_form_trained": -0.2833333333333333,
+        "paddle_malayalam": -0.3333333333333333,
+        "donut_tabular": -0.9999999999999998,
+        "easyocr": -0.26666666666666666
+      },
+      "chosen_engine": "tesseract_standard",
+      "fallback_candidates": [],
+      "expected_latency_sec": 0.8,
+      "expected_confidence": 0.9999999999999998,
+      "preprocessing_recommendation": [
+        "table_extraction"
+      ],
+      "reason": "Selected tesseract_standard due to high confidence, contains tables"
+    },
+    {
+      "document_id": "test_doc_5",
+      "posteriors": {
+        "tesseract_standard": 0.0,
+        "tesseract_form_trained": 6.898034268544888e-22,
+        "paddle_malayalam": 0.0,
+        "donut_tabular": 4.290759236581775e-22,
+        "easyocr": 1.0
+      },
+      "normalized_latency": {
+        "tesseract_standard": 0.30000000000000004,
+        "tesseract_form_trained": 0.5,
+        "paddle_malayalam": 0.0,
+        "donut_tabular": 1.0,
+        "easyocr": 0.5
+      },
+      "normalized_resource_cost": {
+        "tesseract_standard": 0.0,
+        "tesseract_form_trained": 0.06666666666666665,
+        "paddle_malayalam": 0.6666666666666666,
+        "donut_tabular": 1.0,
+        "easyocr": 0.03333333333333336
+      },
+      "utility_scores": {
+        "tesseract_standard": -0.15000000000000002,
+        "tesseract_form_trained": -0.2833333333333333,
+        "paddle_malayalam": -0.3333333333333333,
+        "donut_tabular": -1.0,
+        "easyocr": 0.7333333333333333
+      },
+      "chosen_engine": "easyocr",
+      "fallback_candidates": [],
+      "expected_latency_sec": 1.0,
+      "expected_confidence": 1.0,
+      "preprocessing_recommendation": [],
+      "reason": "Selected easyocr due to high confidence, contains forms"
+    }
+  ],
+  "evaluation_recommendations": {
+    "min_samples_per_engine": 50,
+    "cross_validation": "k_fold",
+    "k": 5,
+    "metrics": [
+      "accuracy",
+      "precision",
+      "recall",
+      "f1",
+      "latency_ms_p95"
+    ]
+  },
+  "notes": "Model trained on 1489 documents. Using 14 features. Consider collecting more samples per engine for better performance."
+}
