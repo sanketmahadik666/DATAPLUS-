@@ -1,0 +1,29 @@
+
+FINAL PDF METADATA ANALYSIS REPORT
+==================================
+
+Analysis Timestamp: 2025-10-21T10:32:48.592204
+Total PDFs Processed: 1007
+Successful Analyses: 1007
+Failed Analyses: 0
+Success Rate: 100.0%
+Processing Time: 1305.55 seconds
+Files per Second: 0.77
+
+PERFORMANCE METRICS:
+- Average Processing Time: 1.296s per file
+- Success Rate: 100.00%
+
+DOCUMENT CHARACTERISTICS SUMMARY:
+
+Language Distribution:
+  unknown: 1007
+
+OCR Engine Recommendations:
+  form_optimized: 1007
+
+Priority Distribution:
+  normal: 1007
+
+Department Context:
+  general: 1007

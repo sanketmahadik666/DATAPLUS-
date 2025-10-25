@@ -1,0 +1,295 @@
+{
+  "ocr_engines": {
+    "form_optimized": {
+      "priority": 1,
+      "handles_forms": true,
+      "description": "Optimized for form processing with field detection",
+      "use_cases": ["forms", "applications", "surveys", "questionnaires"],
+      "specializations": ["field_detection", "validation", "data_extraction"]
+    },
+    "table_optimized": {
+      "priority": 2,
+      "handles_tables": true,
+      "description": "Specialized for table-heavy documents",
+      "use_cases": ["spreadsheets", "financial_reports", "data_tables", "invoices"],
+      "specializations": ["table_structure", "cell_detection", "data_alignment"]
+    },
+    "handwriting": {
+      "priority": 3,
+      "handles_handwriting": true,
+      "description": "Designed for handwritten content and signatures",
+      "use_cases": ["signatures", "handwritten_notes", "forms_with_handwriting", "manuscripts"],
+      "specializations": ["handwriting_recognition", "signature_verification", "cursive_text"]
+    },
+    "multilingual": {
+      "priority": 4,
+      "handles_multilingual": true,
+      "description": "Supports multiple languages in single document",
+      "use_cases": ["international_documents", "bilingual_forms", "translation_documents"],
+      "specializations": ["language_detection", "mixed_language", "script_recognition"]
+    },
+    "financial": {
+      "priority": 5,
+      "handles_financial": true,
+      "description": "Specialized for financial documents",
+      "use_cases": ["invoices", "receipts", "statements", "tax_forms"],
+      "specializations": ["number_recognition", "currency_detection", "financial_formatting"]
+    },
+    "legal": {
+      "priority": 6,
+      "handles_legal": true,
+      "description": "Optimized for legal documents",
+      "use_cases": ["contracts", "agreements", "legal_forms", "court_documents"],
+      "specializations": ["legal_terminology", "section_detection", "compliance_checking"]
+    },
+    "medical": {
+      "priority": 7,
+      "handles_medical": true,
+      "description": "Specialized for medical documents",
+      "use_cases": ["patient_forms", "medical_reports", "prescriptions", "lab_results"],
+      "specializations": ["medical_terminology", "patient_data", "privacy_compliance"]
+    },
+    "academic": {
+      "priority": 8,
+      "handles_academic": true,
+      "description": "Optimized for academic documents",
+      "use_cases": ["research_papers", "theses", "academic_forms", "publications"],
+      "specializations": ["citation_detection", "academic_formatting", "bibliography"]
+    },
+    "invoice": {
+      "priority": 9,
+      "handles_invoices": true,
+      "description": "Specialized for invoice processing",
+      "use_cases": ["vendor_invoices", "billing_documents", "payment_requests"],
+      "specializations": ["line_item_detection", "amount_extraction", "vendor_identification"]
+    },
+    "receipt": {
+      "priority": 10,
+      "handles_receipts": true,
+      "description": "Optimized for receipt processing",
+      "use_cases": ["expense_receipts", "purchase_receipts", "transaction_records"],
+      "specializations": ["merchant_detection", "amount_extraction", "date_recognition"]
+    },
+    "contract": {
+      "priority": 11,
+      "handles_contracts": true,
+      "description": "Specialized for contract analysis",
+      "use_cases": ["service_agreements", "employment_contracts", "lease_agreements"],
+      "specializations": ["clause_detection", "term_extraction", "signature_verification"]
+    },
+    "standard": {
+      "priority": 12,
+      "general_purpose": true,
+      "description": "General-purpose OCR for standard documents",
+      "use_cases": ["letters", "reports", "articles", "general_text"],
+      "specializations": ["general_text_recognition", "paragraph_detection", "basic_formatting"]
+    }
+  },
+  "thresholds": {
+    "text_density_high": 0.7,
+    "text_density_low": 0.3,
+    "table_ratio_threshold": 0.1,
+    "image_ratio_threshold": 0.2,
+    "layout_complexity_high": 0.7,
+    "layout_complexity_low": 0.3,
+    "font_variance_high": 0.5,
+    "font_variance_low": 0.2,
+    "skew_threshold": 5.0,
+    "noise_threshold": 0.1,
+    "contrast_threshold": 0.3,
+    "handwriting_ratio_threshold": 0.2,
+    "signature_quality_threshold": 0.6,
+    "logo_detection_threshold": 0.5,
+    "form_complexity_threshold": 0.5,
+    "multilingual_confidence_threshold": 0.7
+  },
+  "departments": {
+    "business_reporting": {
+      "keywords": ["report", "progress", "competitive", "introduction", "business", "analysis", "quarterly", "annual"],
+      "priority_multiplier": 1.0,
+      "ocr_engine_preference": "form_optimized"
+    },
+    "financial": {
+      "keywords": ["invoice", "receipt", "payment", "financial", "accounting", "budget", "expense", "revenue"],
+      "priority_multiplier": 1.2,
+      "ocr_engine_preference": "financial"
+    },
+    "legal": {
+      "keywords": ["contract", "agreement", "legal", "terms", "law", "court", "litigation", "compliance"],
+      "priority_multiplier": 1.5,
+      "ocr_engine_preference": "legal"
+    },
+    "medical": {
+      "keywords": ["patient", "medical", "health", "prescription", "diagnosis", "treatment", "hospital", "clinic"],
+      "priority_multiplier": 1.3,
+      "ocr_engine_preference": "medical"
+    },
+    "academic": {
+      "keywords": ["research", "paper", "thesis", "academic", "study", "university", "scholar", "publication"],
+      "priority_multiplier": 1.0,
+      "ocr_engine_preference": "academic"
+    },
+    "hr": {
+      "keywords": ["employee", "hr", "human_resources", "personnel", "staff", "recruitment", "training"],
+      "priority_multiplier": 1.1,
+      "ocr_engine_preference": "form_optimized"
+    },
+    "operations": {
+      "keywords": ["operations", "logistics", "supply_chain", "inventory", "procurement", "vendor"],
+      "priority_multiplier": 1.0,
+      "ocr_engine_preference": "standard"
+    },
+    "general": {
+      "keywords": [],
+      "priority_multiplier": 1.0,
+      "ocr_engine_preference": "standard"
+    }
+  },
+  "routing_rules": {
+    "primary_criteria": [
+      "document_type",
+      "form_fields_detected",
+      "table_ratio",
+      "contains_signature",
+      "handwriting_detected",
+      "bilingual_flag",
+      "multilingual_languages"
+    ],
+    "secondary_criteria": [
+      "layout_complexity_score",
+      "text_density",
+      "font_variance_score",
+      "image_quality_score",
+      "department_context",
+      "business_function"
+    ],
+    "tertiary_criteria": [
+      "priority_level",
+      "sensitivity_level",
+      "compliance_requirements",
+      "processing_priority"
+    ],
+    "fallback_engine": "standard",
+    "confidence_threshold": 0.6,
+    "routing_algorithm": "weighted_scoring"
+  },
+  "processing_recommendations": {
+    "fast_processing": {
+      "conditions": ["text_density > 0.7", "layout_complexity < 0.3", "image_quality_score > 0.8"],
+      "description": "Simple layout, high text density, good image quality",
+      "estimated_time": "10-30 seconds"
+    },
+    "careful_processing": {
+      "conditions": ["text_density < 0.3", "layout_complexity > 0.7", "handwriting_detected"],
+      "description": "Complex layout, low text density, or handwriting present",
+      "estimated_time": "60-180 seconds"
+    },
+    "specialized_processing": {
+      "conditions": ["table_ratio > 0.2", "multilingual_languages.length > 1", "form_complexity > 0.7"],
+      "description": "Requires specialized OCR engine",
+      "estimated_time": "30-120 seconds"
+    },
+    "standard_processing": {
+      "conditions": [],
+      "description": "Default processing for most documents",
+      "estimated_time": "20-60 seconds"
+    }
+  },
+  "confidence_scoring": {
+    "annotation_bonus": 0.3,
+    "image_quality_threshold": 1000,
+    "minimum_confidence": 0.5,
+    "maximum_confidence": 1.0,
+    "quality_factors": {
+      "image_resolution": 0.2,
+      "text_clarity": 0.3,
+      "layout_simplicity": 0.2,
+      "annotation_completeness": 0.3
+    }
+  },
+  "preprocessing_options": {
+    "deskew": {
+      "threshold": 2.0,
+      "description": "Correct document skew"
+    },
+    "denoise": {
+      "threshold": 0.15,
+      "description": "Remove image noise"
+    },
+    "contrast_enhancement": {
+      "threshold": 0.2,
+      "description": "Enhance contrast"
+    },
+    "brightness_adjustment": {
+      "threshold": 0.3,
+      "description": "Adjust brightness"
+    },
+    "rotation": {
+      "threshold": 5.0,
+      "description": "Rotate document"
+    },
+    "binarization": {
+      "method": "adaptive",
+      "description": "Convert to black and white"
+    }
+  },
+  "postprocessing_options": {
+    "spell_check": {
+      "enabled": true,
+      "confidence_threshold": 0.8
+    },
+    "formatting_preservation": {
+      "enabled": true,
+      "preserve_layout": true
+    },
+    "data_validation": {
+      "enabled": true,
+      "validate_numbers": true,
+      "validate_dates": true
+    },
+    "confidence_scoring": {
+      "enabled": true,
+      "per_word_confidence": true
+    }
+  },
+  "quality_metrics": {
+    "text_quality": {
+      "factors": ["clarity", "completeness", "accuracy"],
+      "weights": [0.4, 0.3, 0.3]
+    },
+    "layout_quality": {
+      "factors": ["structure", "alignment", "spacing"],
+      "weights": [0.5, 0.3, 0.2]
+    },
+    "image_quality": {
+      "factors": ["resolution", "contrast", "sharpness"],
+      "weights": [0.4, 0.3, 0.3]
+    }
+  },
+  "compliance_settings": {
+    "gdpr": {
+      "enabled": false,
+      "data_retention_days": 30
+    },
+    "hipaa": {
+      "enabled": false,
+      "encryption_required": true
+    },
+    "sox": {
+      "enabled": false,
+      "audit_trail_required": true
+    },
+    "pci_dss": {
+      "enabled": false,
+      "secure_processing_required": true
+    }
+  },
+  "performance_settings": {
+    "batch_size": 10,
+    "max_concurrent_processing": 5,
+    "timeout_seconds": 300,
+    "retry_attempts": 3,
+    "cache_results": true,
+    "cache_duration_hours": 24
+  }
+}

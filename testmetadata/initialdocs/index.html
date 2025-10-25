@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMRL Smart Automation - Document Overload Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-subway"></i>
+                <span>KMRL Smart Automation</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#status" class="nav-link">Status</a></li>
+                <li><a href="#upload" class="nav-link">Upload Work</a></li>
+                <li><a href="#catalog" class="nav-link">Catalog</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Problem Statement 25080</h1>
+                <h2 class="hero-subtitle">Document Overload Management at KMRL</h2>
+                <p class="hero-description">
+                    Transforming document management through smart automation, reducing information latency, 
+                    and ensuring compliance with centralized, bilingual support for Kochi Metro Rail Limited.
+                </p>
+                <div class="hero-cta">
+                    <button class="btn-primary" onclick="scrollToSection('status')">
+                        <i class="fas fa-chart-line"></i>
+                        View Work Status
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('upload')">
+                        <i class="fas fa-upload"></i>
+                        Upload Reports
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="metro-card">
+                    <div class="metro-line"></div>
+                    <div class="metro-stations">
+                        <div class="station active">Data Input</div>
+                        <div class="station">Processing</div>
+                        <div class="station">Automation</div>
+                        <div class="station">Compliance</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Status Section -->
+    <section id="status" class="status-section">
+        <div class="container">
+            <h2 class="section-title">Work Status Dashboard</h2>
+            <div class="status-grid">
+                <div class="status-card">
+                    <div class="status-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="status-content">
+                        <h3>Documents Processed</h3>
+                        <div class="status-number" data-target="1247">0</div>
+                        <div class="status-progress">
+                            <div class="progress-bar" data-width="85"></div>
+                        </div>
+                        <p class="status-label">This Month</p>
+                    </div>
+                </div>
+
+                <div class="status-card">
+                    <div class="status-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="status-content">
+                        <h3>Mitigation Strategies</h3>
+                        <div class="status-number" data-target="23">0</div>
+                        <div class="status-progress">
+                            <div class="progress-bar" data-width="92"></div>
+                        </div>
+                        <p class="status-label">Implemented</p>
+                    </div>
+                </div>
+
+                <div class="status-card">
+                    <div class="status-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="status-content">
+                        <h3>Pending Work</h3>
+                        <div class="status-number" data-target="156">0</div>
+                        <div class="status-progress">
+                            <div class="progress-bar" data-width="45"></div>
+                        </div>
+                        <p class="status-label">In Queue</p>
+                    </div>
+                </div>
+
+                <div class="status-card">
+                    <div class="status-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="status-content">
+                        <h3>Bilingual Support</h3>
+                        <div class="status-number" data-target="98">0</div>
+                        <div class="status-progress">
+                            <div class="progress-bar" data-width="98"></div>
+                        </div>
+                        <p class="status-label">Accuracy Rate</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="benefits-section">
+                <h3 class="benefits-title">Key Benefits</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h4>Reduced Information Latency</h4>
+                        <p>Faster document processing and retrieval</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-robot"></i>
+                        <h4>Compliance Automation</h4>
+                        <p>Automated compliance checking and reporting</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-database"></i>
+                        <h4>Centralized Logs</h4>
+                        <p>Unified logging and audit trail</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-eye"></i>
+                        <h4>Optimized OCR</h4>
+                        <p>Advanced optical character recognition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload & Case Studies Section -->
+    <section id="upload" class="upload-section">
+        <div class="container">
+            <h2 class="section-title">Upload Work & Case Studies</h2>
+            
+            <div class="upload-area">
+                <div class="upload-zone" id="uploadZone">
+                    <div class="upload-content">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Drag & Drop Files Here</h3>
+                        <p>Upload reports, mitigation strategies, and brainstorming notes</p>
+                        <button class="btn-primary" onclick="document.getElementById('fileInput').click()">
+                            <i class="fas fa-plus"></i>
+                            Choose Files
+                        </button>
+                        <input type="file" id="fileInput" multiple accept=".pdf,.doc,.docx,.txt,.md" style="display: none;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-studies">
+                <h3 class="case-studies-title">Recent Case Studies & Reports</h3>
+                <div class="case-studies-grid" id="caseStudiesGrid">
+                    <!-- Case studies will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mitigation Strategies Section -->
+    <section class="mitigation-section">
+        <div class="container">
+            <h2 class="section-title">Mitigation Strategies</h2>
+            <div class="strategies-container">
+                <div class="strategy-card">
+                    <div class="strategy-header" onclick="toggleStrategy(this)">
+                        <h3>Document Classification Automation</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="strategy-content">
+                        <p>Implemented AI-powered document classification to automatically categorize incoming documents based on content, reducing manual sorting time by 70%.</p>
+                        <div class="strategy-metrics">
+                            <span class="metric">Time Saved: 15 hours/week</span>
+                            <span class="metric">Accuracy: 94%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-header" onclick="toggleStrategy(this)">
+                        <h3>Bilingual OCR Enhancement</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="strategy-content">
+                        <p>Enhanced OCR capabilities to handle both English and Malayalam documents with improved accuracy and metadata extraction.</p>
+                        <div class="strategy-metrics">
+                            <span class="metric">Language Support: 2</span>
+                            <span class="metric">Accuracy: 98%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-header" onclick="toggleStrategy(this)">
+                        <h3>Persona-Driven Alert System</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="strategy-content">
+                        <p>Developed intelligent alert system that notifies relevant personnel based on document type and urgency, improving response times.</p>
+                        <div class="strategy-metrics">
+                            <span class="metric">Response Time: -60%</span>
+                            <span class="metric">User Satisfaction: 95%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section id="catalog" class="catalog-section">
+        <div class="container">
+            <h2 class="section-title">Document Catalog</h2>
+            
+            <div class="catalog-controls">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search documents...">
+                </div>
+                <div class="filter-controls">
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="reports">Reports</option>
+                        <option value="strategies">Mitigation Strategies</option>
+                        <option value="notes">Brainstorming Notes</option>
+                        <option value="compliance">Compliance</option>
+                    </select>
+                    <select id="tagFilter">
+                        <option value="">All Tags</option>
+                        <option value="urgent">Urgent</option>
+                        <option value="review">Review</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="catalog-grid" id="catalogGrid">
+                <!-- Documents will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Team Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Team Data Pulse</h2>
+            <div class="team-content">
+                <div class="team-info">
+                    <h3>Team ISIH062 - Data Pulse</h3>
+                    <p class="team-description">
+                        We are a dedicated team working on Smart Automation solutions for Kochi Metro Rail Limited. 
+                        Our focus is on solving the critical problem of document overload through innovative technology 
+                        and user-centered design.
+                    </p>
+                    <div class="team-features">
+                        <div class="feature">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Innovation-driven solutions</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <span>User-centered design</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-cogs"></i>
+                            <span>Smart automation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-stats">
+                    <div class="stat">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Team Members</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Weeks of Development</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Dedication</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>KMRL Smart Automation</h4>
+                    <p>Transforming document management through smart automation</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#status">Work Status</a></li>
+                        <li><a href="#upload">Upload Work</a></li>
+                        <li><a href="#catalog">Document Catalog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Team Data Pulse (ISIH062)</p>
+                    <p>SIH 2025 Project</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Team Data Pulse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

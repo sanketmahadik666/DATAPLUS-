@@ -1,0 +1,237 @@
+{
+  "metadata_extraction": {
+    "status": "SUCCESS",
+    "total_files": 10,
+    "successful_extractions": 10,
+    "failed_extractions": 0,
+    "success_rate": 100.0,
+    "extraction_time_seconds": 0.31022071838378906,
+    "files_per_second": 32.23511328353162,
+    "sample_features": {
+      "document_id": "invoice_Aaron Bergman_36258",
+      "page_count": 1,
+      "total_characters": 424,
+      "has_tables": false,
+      "text_density": 874.7606786822473,
+      "recommended_engine": "paddleocr"
+    }
+  },
+  "ocr_routing": {
+    "status": "SUCCESS",
+    "service_health": "HEALTHY",
+    "routing_tests": {
+      "Default Parameters": {
+        "status": "SUCCESS",
+        "processing_time_ms": 2063.8771057128906,
+        "documents_processed": 3,
+        "engine_distribution": {
+          "tesseract_standard": 3
+        },
+        "average_confidence": 0.0,
+        "average_latency": 0.8000000000000002,
+        "features_used": 10,
+        "sample_routing": {
+          "document_id": "invoice_Aaron Bergman_36258",
+          "posteriors": {
+            "tesseract_standard": 0.0,
+            "tesseract_form_trained": 0.0,
+            "paddle_malayalam": 0.0,
+            "donut_tabular": 0.0,
+            "easyocr": 0.0
+          },
+          "normalized_latency": {
+            "tesseract_standard": 0.30000000000000004,
+            "tesseract_form_trained": 0.5,
+            "paddle_malayalam": 0.0,
+            "donut_tabular": 1.0,
+            "easyocr": 0.5
+          },
+          "normalized_resource_cost": {
+            "tesseract_standard": 0.0,
+            "tesseract_form_trained": 0.06666666666666665,
+            "paddle_malayalam": 0.6666666666666666,
+            "donut_tabular": 1.0,
+            "easyocr": 0.03333333333333336
+          },
+          "utility_scores": {
+            "tesseract_standard": -0.15000000000000002,
+            "tesseract_form_trained": -0.2833333333333333,
+            "paddle_malayalam": -0.3333333333333333,
+            "donut_tabular": -1.0,
+            "easyocr": -0.26666666666666666
+          },
+          "chosen_engine": "tesseract_standard",
+          "fallback_candidates": [],
+          "expected_latency_sec": 0.8,
+          "expected_confidence": 0.0,
+          "preprocessing_recommendation": [],
+          "reason": "Selected tesseract_standard due to low confidence, high text density, contains forms"
+        }
+      },
+      "High Accuracy Preference": {
+        "status": "SUCCESS",
+        "processing_time_ms": 2049.6294498443604,
+        "documents_processed": 3,
+        "engine_distribution": {
+          "tesseract_standard": 3
+        },
+        "average_confidence": 0.0,
+        "average_latency": 0.8000000000000002,
+        "features_used": 10,
+        "sample_routing": {
+          "document_id": "invoice_Aaron Bergman_36258",
+          "posteriors": {
+            "tesseract_standard": 0.0,
+            "tesseract_form_trained": 0.0,
+            "paddle_malayalam": 0.0,
+            "donut_tabular": 0.0,
+            "easyocr": 0.0
+          },
+          "normalized_latency": {
+            "tesseract_standard": 0.30000000000000004,
+            "tesseract_form_trained": 0.5,
+            "paddle_malayalam": 0.0,
+            "donut_tabular": 1.0,
+            "easyocr": 0.5
+          },
+          "normalized_resource_cost": {
+            "tesseract_standard": 0.0,
+            "tesseract_form_trained": 0.06666666666666665,
+            "paddle_malayalam": 0.6666666666666666,
+            "donut_tabular": 1.0,
+            "easyocr": 0.03333333333333336
+          },
+          "utility_scores": {
+            "tesseract_standard": -0.15000000000000002,
+            "tesseract_form_trained": -0.2833333333333333,
+            "paddle_malayalam": -0.3333333333333333,
+            "donut_tabular": -1.0,
+            "easyocr": -0.26666666666666666
+          },
+          "chosen_engine": "tesseract_standard",
+          "fallback_candidates": [],
+          "expected_latency_sec": 0.8,
+          "expected_confidence": 0.0,
+          "preprocessing_recommendation": [],
+          "reason": "Selected tesseract_standard due to low confidence, high text density, contains forms"
+        }
+      },
+      "High Speed Preference": {
+        "status": "SUCCESS",
+        "processing_time_ms": 2065.443992614746,
+        "documents_processed": 3,
+        "engine_distribution": {
+          "tesseract_standard": 3
+        },
+        "average_confidence": 0.0,
+        "average_latency": 0.8000000000000002,
+        "features_used": 10,
+        "sample_routing": {
+          "document_id": "invoice_Aaron Bergman_36258",
+          "posteriors": {
+            "tesseract_standard": 0.0,
+            "tesseract_form_trained": 0.0,
+            "paddle_malayalam": 0.0,
+            "donut_tabular": 0.0,
+            "easyocr": 0.0
+          },
+          "normalized_latency": {
+            "tesseract_standard": 0.30000000000000004,
+            "tesseract_form_trained": 0.5,
+            "paddle_malayalam": 0.0,
+            "donut_tabular": 1.0,
+            "easyocr": 0.5
+          },
+          "normalized_resource_cost": {
+            "tesseract_standard": 0.0,
+            "tesseract_form_trained": 0.06666666666666665,
+            "paddle_malayalam": 0.6666666666666666,
+            "donut_tabular": 1.0,
+            "easyocr": 0.03333333333333336
+          },
+          "utility_scores": {
+            "tesseract_standard": -0.15000000000000002,
+            "tesseract_form_trained": -0.2833333333333333,
+            "paddle_malayalam": -0.3333333333333333,
+            "donut_tabular": -1.0,
+            "easyocr": -0.26666666666666666
+          },
+          "chosen_engine": "tesseract_standard",
+          "fallback_candidates": [],
+          "expected_latency_sec": 0.8,
+          "expected_confidence": 0.0,
+          "preprocessing_recommendation": [],
+          "reason": "Selected tesseract_standard due to low confidence, high text density, contains forms"
+        }
+      },
+      "Low Resource Preference": {
+        "status": "SUCCESS",
+        "processing_time_ms": 2048.1362342834473,
+        "documents_processed": 3,
+        "engine_distribution": {
+          "tesseract_standard": 3
+        },
+        "average_confidence": 0.0,
+        "average_latency": 0.8000000000000002,
+        "features_used": 10,
+        "sample_routing": {
+          "document_id": "invoice_Aaron Bergman_36258",
+          "posteriors": {
+            "tesseract_standard": 0.0,
+            "tesseract_form_trained": 0.0,
+            "paddle_malayalam": 0.0,
+            "donut_tabular": 0.0,
+            "easyocr": 0.0
+          },
+          "normalized_latency": {
+            "tesseract_standard": 0.30000000000000004,
+            "tesseract_form_trained": 0.5,
+            "paddle_malayalam": 0.0,
+            "donut_tabular": 1.0,
+            "easyocr": 0.5
+          },
+          "normalized_resource_cost": {
+            "tesseract_standard": 0.0,
+            "tesseract_form_trained": 0.06666666666666665,
+            "paddle_malayalam": 0.6666666666666666,
+            "donut_tabular": 1.0,
+            "easyocr": 0.03333333333333336
+          },
+          "utility_scores": {
+            "tesseract_standard": -0.15000000000000002,
+            "tesseract_form_trained": -0.2833333333333333,
+            "paddle_malayalam": -0.3333333333333333,
+            "donut_tabular": -1.0,
+            "easyocr": -0.26666666666666666
+          },
+          "chosen_engine": "tesseract_standard",
+          "fallback_candidates": [],
+          "expected_latency_sec": 0.8,
+          "expected_confidence": 0.0,
+          "preprocessing_recommendation": [],
+          "reason": "Selected tesseract_standard due to low confidence, high text density, contains forms"
+        }
+      }
+    },
+    "total_tests": 4,
+    "successful_tests": 4
+  },
+  "performance_metrics": {
+    "metadata_extraction_performance": {
+      "files_per_second": 32.23511328353162,
+      "success_rate": 100.0,
+      "extraction_time": 0.31022071838378906
+    },
+    "ocr_routing_performance": {
+      "average_routing_time_ms": 2056.771695613861,
+      "routing_success_rate": 100.0,
+      "total_routing_tests": 4
+    },
+    "system_throughput": {
+      "end_to_end_latency": 2.36699241399765,
+      "total_processing_capacity": 0.4861988338970901
+    }
+  },
+  "overall_status": "SUCCESS",
+  "total_test_time_seconds": 10.600469589233398
+}

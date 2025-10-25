@@ -1,0 +1,36 @@
+
+FAST SLO-COMPLIANT PDF METADATA ANALYSIS REPORT
+===============================================
+
+Analysis Timestamp: 2025-10-21T10:42:26.086281
+Total PDFs Processed: 1007
+Successful Analyses: 1007
+Failed Analyses: 0
+Success Rate: 100.0%
+Processing Time: 14.14 seconds
+Files per Second: 71.23
+
+SLO COMPLIANCE:
+- P50 Latency: True (0.73s <= 2.0s)
+- P95 Latency: True (1.87s <= 8.0s)
+- P99 Latency: True (2.36s <= 15.0s)
+- Overall SLO Compliant: True
+
+PERFORMANCE METRICS:
+- Throughput: 4273.9 files/minute
+- Success Rate: 100.00%
+- Average Processing Time: 0.014s per file
+
+DOCUMENT CHARACTERISTICS SUMMARY:
+
+Language Distribution:
+  en: 982
+  es: 21
+  de: 4
+
+OCR Engine Recommendations:
+  tesseract: 1007
+
+Priority Distribution:
+  normal: 1005
+  high: 2

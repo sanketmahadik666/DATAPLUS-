@@ -1,0 +1,79 @@
+{
+  "1000+ PDF_Invoice_Folder": {
+    "metrics": {
+      "total_requests": 2014,
+      "success_count": 2014,
+      "error_count": 0,
+      "error_rate": 0.0,
+      "cache_hit_rate": 0.0,
+      "latency_p50": 1.599147081375122,
+      "latency_p95": 1.8102152347564697,
+      "throughput_per_minute": 446.59728776627026
+    },
+    "slo_compliance": {
+      "p50_compliant": true,
+      "p95_compliant": true,
+      "error_compliant": true,
+      "cache_compliant": false,
+      "overall_compliant": false
+    },
+    "processing_time": 270.57869124412537,
+    "summary": {
+      "total_inputs": 2014,
+      "successful": 2014,
+      "failed": 0,
+      "processed_at": 1761018847.9699569
+    }
+  },
+  "dataset/testing_data/images": {
+    "metrics": {
+      "total_requests": 2064,
+      "success_count": 2064,
+      "error_count": 0,
+      "error_rate": 0.0,
+      "cache_hit_rate": 0.0,
+      "latency_p50": 1.595137357711792,
+      "latency_p95": 1.8102152347564697,
+      "throughput_per_minute": 453.0202247318249
+    },
+    "slo_compliance": {
+      "p50_compliant": true,
+      "p95_compliant": true,
+      "error_compliant": true,
+      "cache_compliant": false,
+      "overall_compliant": false
+    },
+    "processing_time": 2.785738229751587,
+    "summary": {
+      "total_inputs": 50,
+      "successful": 50,
+      "failed": 0,
+      "processed_at": 1761018850.7566676
+    }
+  },
+  "document_analyzer_service": {
+    "metrics": {
+      "total_requests": 2064,
+      "success_count": 2064,
+      "error_count": 0,
+      "error_rate": 0.0,
+      "cache_hit_rate": 0.0,
+      "latency_p50": 1.595137357711792,
+      "latency_p95": 1.8102152347564697,
+      "throughput_per_minute": 453.01780866757287
+    },
+    "slo_compliance": {
+      "p50_compliant": true,
+      "p95_compliant": true,
+      "error_compliant": true,
+      "cache_compliant": false,
+      "overall_compliant": false
+    },
+    "processing_time": 0.001275777816772461,
+    "summary": {
+      "total_inputs": 0,
+      "successful": 0,
+      "failed": 0
+    }
+  }
+}

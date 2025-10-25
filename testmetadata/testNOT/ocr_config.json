@@ -1,0 +1,104 @@
+{
+  "ocr_engines": {
+    "form_optimized": {
+      "priority": 1,
+      "handles_forms": true,
+      "description": "Optimized for form processing with field detection",
+      "use_cases": ["forms", "applications", "surveys", "questionnaires"]
+    },
+    "table_optimized": {
+      "priority": 2,
+      "handles_tables": true,
+      "description": "Specialized for table-heavy documents",
+      "use_cases": ["spreadsheets", "financial reports", "data tables", "invoices"]
+    },
+    "handwriting": {
+      "priority": 3,
+      "handles_handwriting": true,
+      "description": "Designed for handwritten content and signatures",
+      "use_cases": ["signatures", "handwritten notes", "forms with handwriting", "manuscripts"]
+    },
+    "multilingual": {
+      "priority": 4,
+      "handles_multilingual": true,
+      "description": "Supports multiple languages in single document",
+      "use_cases": ["international documents", "bilingual forms", "translation documents"]
+    },
+    "standard": {
+      "priority": 5,
+      "general_purpose": true,
+      "description": "General-purpose OCR for standard documents",
+      "use_cases": ["letters", "reports", "articles", "general text documents"]
+    }
+  },
+  "thresholds": {
+    "text_density_high": 0.7,
+    "text_density_low": 0.3,
+    "table_ratio_threshold": 0.1,
+    "image_ratio_threshold": 0.2,
+    "layout_complexity_high": 0.7,
+    "layout_complexity_low": 0.3,
+    "font_variance_high": 0.5,
+    "font_variance_low": 0.2
+  },
+  "departments": {
+    "business_reporting": {
+      "keywords": ["report", "progress", "competitive", "introduction", "business", "analysis"],
+      "priority_multiplier": 1.0
+    },
+    "financial": {
+      "keywords": ["invoice", "receipt", "payment", "financial", "accounting", "budget"],
+      "priority_multiplier": 1.2
+    },
+    "legal": {
+      "keywords": ["contract", "agreement", "legal", "terms", "law", "court"],
+      "priority_multiplier": 1.5
+    },
+    "medical": {
+      "keywords": ["patient", "medical", "health", "prescription", "diagnosis", "treatment"],
+      "priority_multiplier": 1.3
+    },
+    "academic": {
+      "keywords": ["research", "paper", "thesis", "academic", "study", "university"],
+      "priority_multiplier": 1.0
+    },
+    "general": {
+      "keywords": [],
+      "priority_multiplier": 1.0
+    }
+  },
+  "routing_rules": {
+    "primary_criteria": [
+      "form_fields_detected",
+      "table_ratio",
+      "contains_signature",
+      "bilingual_flag"
+    ],
+    "secondary_criteria": [
+      "layout_complexity_score",
+      "text_density",
+      "font_variance_score"
+    ],
+    "fallback_engine": "standard"
+  },
+  "processing_recommendations": {
+    "fast_processing": {
+      "conditions": ["text_density > 0.7", "layout_complexity < 0.3"],
+      "description": "Simple layout, high text density"
+    },
+    "careful_processing": {
+      "conditions": ["text_density < 0.3", "layout_complexity > 0.7"],
+      "description": "Complex layout, low text density"
+    },
+    "standard_processing": {
+      "conditions": [],
+      "description": "Default processing for most documents"
+    }
+  },
+  "confidence_scoring": {
+    "annotation_bonus": 0.3,
+    "image_quality_threshold": 1000,
+    "minimum_confidence": 0.5,
+    "maximum_confidence": 1.0
+  }
+}

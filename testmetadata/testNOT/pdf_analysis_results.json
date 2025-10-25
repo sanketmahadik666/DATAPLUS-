@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "total_inputs": 1007,
+    "successful": 1007,
+    "failed": 0,
+    "processed_at": "2025-10-21T08:58:41.836433Z"
+  },
+  "results": [
+    {
+      "document_id": "invoice_Aaron Bergman_36258_p1",
+      "file_name": "invoice_Aaron Bergman_36258_p1.png",
+      "file_size_bytes": 132087,
+      "num_pages": 1,
+      "language_detected": "en",
+      "bilingual_flag": false,
+      "text_density": 0.03382673796791444,
+      "table_ratio": 1.0,
+      "image_ratio": 0.024905882352941177,
+      "contains_signature": true,
+      "contains_logo": false,
+      "form_fields_detected": 

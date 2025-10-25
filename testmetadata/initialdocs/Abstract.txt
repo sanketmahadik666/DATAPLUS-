@@ -1,0 +1,88 @@
+Abstract
+
+The Kochi Metro Rail Limited (KMRL) faces a persistent challenge of document overload due to the influx of heterogeneous, departments facing problem recompilation for same document, Co-ordination within desired department at KMRL, multi-source, bilingual (English/Malayalam) records, staff facing issues with latency overhead and missing important event. The proposed Data Pulse Document Management and Processing Platform introduces an event-driven, microservices-based architecture to automate ingestion, preprocessing, intelligent classification, policy-based routing, indexing, search, and retrieval of documents while ensuring governance, compliance, and role-based security.
+
+This solution leverages distributed OCR, AI-based natural language understanding, and hybrid rule-driven decision tree engines to achieve high confidence for auto-routing to corresponding file directory path, minimize manual interventions in document segrigation and giving best document searching experience, and deliver real-time traceability. It incorporates with bilingual search with phonetic and semantic enrichment, policy-driven segregation, human-in-the-loop review for ambiguous cases and tranning perpose in early time of new directory, and complete event-sourced auditability. Persona-based user interfaces—tailored for central committees, department managers emphases to maintain co-ordination whinin department if help needed from other deparments raising issue to central committees, and staff—enable scalable operations, transparent workflows, and actionable reporting,persona based UI and privallage polily for beloging documents.
+
+Our design principles emphasize loose coupling, functional and data partitioning, zero-trust security, high availability, asynchronous resilience, deduplication, and caching strategies. The system ensures sustainable cost efficiency through tiered storage, workload autoscaling, and selective reuse of OCR/LLM outputs(thinking on it). Operational quality attributes include multilingual OCR accuracy, p95 ingestion-to-preview latencies, search response under strict SLOs, and continuous monitoring for model drift, PII leakage, or cross-department data breaches.
+
+The phased implementation roadmap (12–16 weeks) covers ingestion, normalization, OCR, AI understanding, policy routing, indexing, search, centralized access, and reporting, culminating in a hardened, production-ready deployment with established KPIs, SLAs, and compliance standards. By harmonizing AI, automation, and governance, the Data Pulse solution provides KMRL with a scalable, secure, and transparent document ecosystem, significantly reducing overload while strengthening compliance and decision-making.
+
+Summary
+Problem Statement
+
+KMRL’s operations are hindered by the exponential growth of unstructured, bilingual documents arriving via multiple channels (WhatsApp, email, SharePoint, scanned kiosks). Manual handling causes delays, compliance risks, and inefficiencies. The goal is to reduce document overload through automated ingestion from , intelligent classification, secure routing, and efficient retrieval.
+
+Key Personas
+
+Central Committee: Policy authority; governs ABAC/RBAC, compliance, and cross-tenant oversight.
+
+Department Manager: Oversees SLAs, low-confidence reviews, and audits.
+
+Department Staff: Uploads, retrieves, and confirms documents as needed.
+
+Platform Team/Operators: Maintains system reliability, observability, scaling, and incident response.
+
+Architectural Approach
+
+The platform uses a microservices event-driven pipeline:
+
+Ingestion – Accepts multi-source documents; validates, deduplicates, and stores in S3.
+
+Preprocessing/Normalization – Converts to standardized PDF, detects language, enhances quality.
+
+Distributed OCR – Hybrid fast/deep OCR with autoscaling and multilingual accuracy controls.
+
+AI Understanding – LLM-based summarization, entity recognition, classification with confidence gating.
+
+Policy Routing & Segregation – Decision tree + rules engine for ABAC/RBAC-driven routing.
+
+Indexing & Search – Elasticsearch indices per department; bilingual analyzers; role-aware ranking.
+
+Access & UI – Persona dashboards, GraphQL APIs, and a voice assistant for secure, explainable access.
+
+Governance & Compliance – Event-sourced audit logs, version control, retention policies, and traceability.
+
+Cross-Cutting Qualities
+
+Security: Zero-trust, least privilege, encrypted transport/storage, multi-factor controls.
+
+Availability: Multi-AZ deployments, replicas, resilient queues, DR drills.
+
+Performance: Load-tested pipelines, autoscaling workers, aggressive caching (Redis, CDN).
+
+Resilience: DLQs, retries, idempotent processing, schema versioning.
+
+Cost Optimization: Storage tiering, workload scheduling, selective model usage.
+
+Data Model & Events
+
+A unified MongoDB schema stores document metadata, OCR/LLM fields, rules fired, and audit refs. All stages emit standardized JSON events (IngestedDocumentEvent, NormalizedDocumentEvent, OcrCompletedEvent, LlMExtractedEvent, RoutingDecisionEvent).
+
+Risk Management
+
+Key risks include model drift, PII leakage, cross-department data bleed, vendor lock-in, and operational complexity. Mitigations involve shadow deployments, watermarking, strict partitioning, abstraction layers, and standard runbooks.
+
+Implementation Plan (12–16 Weeks)
+
+Phase 0–1: Governance setup, ingestion, deduplication, S3 storage.
+
+Phase 2–3: Normalization, OCR, LLM extraction, caching, manual review queue.
+
+Phase 4–5: Policy routing, search, persona dashboards.
+
+Phase 6: Centralized access, voice assistant, reporting.
+
+Phase 7: Hardening, chaos testing, go-live.
+
+Expected Outcomes
+
+≥90% auto-routing accuracy.
+
+Bilingual OCR with reliable CER/WER.
+
+Ingest-to-preview latency within defined p95 targets.
+
+Zero policy violations and complete auditability.
+
+Sustainable cost with elastic scaling.

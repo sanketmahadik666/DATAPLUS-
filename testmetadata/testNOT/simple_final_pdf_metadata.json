@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "analysis_timestamp": "2025-10-21T10:32:48.592204",
+    "total_pdfs_processed": 1007,
+    "successful_analyses": 1007,
+    "failed_analyses": 0,
+    "processing_time_seconds": 1305.5460181236267,
+    "performance_metrics": {
+      "average_processing_time": 1.2964707230621915,
+      "success_rate": 1.0
+    },
+    "files_per_second": 0.7713247836696658
+  },
+  "pdf_metadata": [
+    {
+      "document_id": "invoice_Aaron Bergman_36258",
+      "file_name": "invoice_Aaron Bergman_36258.pdf",
+      "file_path": "1000+ PDF_Invoice_Folder\\invoice_Aaron Bergman_36258.pdf",
+      "file_size_bytes": 15813,
+      "file_modified_time": "2025-09-20T15:30:20.808321",
+      "processing_status": "success",
+      "processing_time": 1.8197944164276123,
+      "analysis": {
+        "document_id": "invoice_Aaron Bergman_36258_p1",
+        "file_name": "invoice_Aaron Bergman_36258_p1.png",
+        "file_size_bytes": 132087,
+        "num_pages": 1,
+        "language_detected": "en",
+        "bilingual_flag": false,
+        "text_density": 0.03382673796791444,
+        "table_ratio": 1.0,
+        "image_ratio": 0.024905882352941177,
+        "contains_signature": true,
+        "contains_logo": false,
+        "form_fields_detected": 

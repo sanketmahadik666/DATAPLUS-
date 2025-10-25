@@ -1,0 +1,276 @@
+TECHNICAL SOLUTION DESCRIPTION – KMRL Document Overload Reduction (Data Pulse)
+
+1) Executive Summary
+- Objective: Reduce document overload at KMRL by automating ingestion, understanding, routing, and retrieval of multi‑source, bilingual (English/Malayalam) documents with strong governance, auditability, and role‑based access across central, department, and sub‑department layers.
+- Approach: Event‑driven microservices with functional partitioning: Ingestion → Preprocessing/Normalization → Distributed OCR → AI Understanding (LLM + rules) → Document Segregation/Policy Routing → Indexing/Search → Retrieval/UI → Governance/Compliance. Data partitioning across departments and sensitivity levels. Zero‑trust security and complete traceability.
+- Outcomes: High auto‑routing accuracy (≥90% confidence), fast search with previews, minimized manual review, strong compliance/version control, scalable and cost‑efficient operations.
+
+2) System Context & Personas (KMRL-Specific Roles)
+- Central Committee: Policy authority; governs ABAC/RBAC, compliance, and cross-tenant oversight; grants/revokes departmental scopes; approves exceptions and legal holds; monitors system-wide performance and security across all KMRL stations and departments.
+- Department Manager: Oversees SLAs, low-confidence reviews, and audits; manages department-level rules and workflows; ensures compliance with KMRL operational standards; coordinates with other departments and central committee.
+- Department Staff: Uploads, retrieves, and confirms documents as needed; participates in manual confirmations for low-confidence cases; searches and previews documents within authorized scope; maintains document quality and accuracy standards.
+- Platform Team/Operators: Maintains system reliability, observability, scaling, and incident response; owns shared components (queues, storage, search, observability); ensures 24/7 availability for KMRL operations; manages capacity planning and performance optimization.
+
+3) Architecture Overview (mapped to diagram)
+- Persona‑based UI with RBAC connects to APIs and GraphQL for read models.
+- Ingestion service receives docs from WhatsApp, Email, SharePoint, and Scanned kiosks; pushes raw objects to S3 and envelopes to message queues.
+- OCR Services + Rule‑Based File Processing convert documents into text, keypoints, and structured metadata; LayoutLM/vision models used when layout is complex.
+- LLM pipeline produces summary, keywords, entities (author, department, dates, IDs), and doc‑type classification with confidence.
+- Document Segregation Layer decides final directory/category using a decision tree trained on LLM features and layout cues; invokes Policy Engine for routing/approvals.
+- Centralized Access component offers real‑time tracking and cross‑department coordination per RBAC; all actions are audited.
+- Metadata and summaries in MongoDB; full‑text indexed in Elasticsearch (OCR text + LLM outputs); S3 stores raw and normalized blobs.
+- Queue for Manual Confirmation holds low‑confidence or miscellaneous documents for human review.
+
+4) Detailed End‑to‑End Workflow
+4.1 Ingestion
+- Sources: WhatsApp bot, email inboxes, SharePoint libraries, scanning devices, and partner APIs.
+- Steps:
+  1) Validate envelope JSON (source, sender, timestamps, optional dept hint, sensitivity estimate). Enforce size/type quotas by source.
+  2) Compute contentHash (SHA‑256) for deduplication. Check cache to reuse previous OCR/LLM results if compatible with current model/prompt versions.
+  3) Assign documentId and store original in S3 at tenant/dept/yyyy/mm/dd/documentId.ext with object versioning enabled.
+  4) Publish IngestedDocumentEvent to the event bus with S3 key and metadata. Idempotent producer with exactly‑once semantic via idempotency keys.
+- Design Issues & Controls:
+  • Loose Coupling: Event bus decouples sources from processors.
+  • Data Partitioning: Bucket prefixes per tenant/dept; access via scoped IAM.
+  • Security: MIME/type validation, antivirus/VT checks as policy; least privilege on upload.
+  • Deduplication: Pre‑queue contentHash filters duplicates and reduces downstream load.
+
+4.2 Preprocessing & Normalization
+- Convert Office/PDF/Images to normalized PDF/A and page‑level images; extract page manifests (coordinates, regions, headings, tables), and per‑page language detection (English/Malayalam).
+- Quality enhancement pipeline: de‑skew, de‑blur, contrast fix; retry thresholds.
+- Emit NormalizedDocumentEvent with pointers to normalized blob and page manifest.
+- Design Issues & Controls:
+  • Functional Partitioning: Dedicated normalization microservice; retriable and idempotent.
+  • Standards: PDF/A, JSON Schema for manifests; OpenAPI for service APIs.
+  • Observability: Metrics for page counts, enhancement rate, failure reasons.
+
+4.3 Distributed OCR
+- Strategy: Hybrid OCR (fast engine for good pages; deep OCR for low quality or layout‑rich pages). Use LayoutLM/vision models when coordinates and structure are critical.
+- Execution: Page‑level sharding across workers; autoscaling by queue depth; resumable jobs with per‑page checkpoints; WER/CER sampling.
+- Output: OcrCompletedEvent containing per‑page text, confidences, language tags, and coordinates.
+- Design Issues & Controls:
+  • Asynchronous Processing: No message ordering assumption; correlation by documentId; idempotent page writes.
+  • Capacity & Scaling: GPU/CPU pool autoscaling; connection pooling for storage and metadata DB.
+  • Monitoring: Confidence histograms by language; DLQ with quarantine UI.
+
+4.4 AI‑Based Understanding (LLM + Rules)
+- Tasks: Summarization, keyword extraction, entity recognition (author, organization, amounts, dates, IDs), logo detection (CV), and document type classification.
+- Rule Library: Versioned prompts by department; test cases and evaluation metrics stored; policy for ≥90% confidence to auto‑route.
+- Confidence Gating: ≥90% → auto route; 70–89% → human review recommended; <70% → mandatory review.
+- Caching: Response cache keyed by contentHash + modelVersion + promptVersion; enforce authorization at read, not at cache key.
+- Output: LlMExtractedEvent with fields, docType, confidence, model/prompt versions, and evaluation reference.
+- Design Issues & Controls:
+  • Caching Service Responses: Save LLM outputs; reuse safely among users after access check.
+  • Replication/Resilience: Shadow deployments of new prompts/models; canary gating.
+  • Compliance: Redaction option before indexing if sensitive PII detected; policy‑driven.
+
+4.5 Document Segregation & Policy‑Based Routing
+- Segregation: Decision tree (or gradient model) trained on LLM features, layout signals, and keywords suggests the final directory/category.
+- Policy Engine (ABAC/RBAC): Maps docType + department + sensitivity to queues, directories, and approvers. Rules are declarative and versioned; changes audited.
+- Human‑in‑Loop: Low‑confidence or conflicting decisions go to Manual Confirmation Queue with SLA timers and escalation to manager or central committee.
+- Output: RoutingDecisionEvent with rules fired, approver requirements, and target storage/indexing updates.
+- Design Issues & Controls:
+  • Loose Coupling: Router publishes events rather than invoking storage directly.
+  • Transparency: UI shows rules fired and reasons; replayable decisions for audits.
+  • Adoption: Department‑specific templates ease onboarding.
+
+4.6 Indexing, Search & Retrieval
+- Elasticsearch: Index OCR text, summaries, entities, docType, language tags, confidence, department, sensitivity, s3Key, contentHash. Indices per department with time‑based ILM; aliases for current datasets.
+- Search: Bilingual analyzers (Malayalam/English), synonym sets per department, phonetic matching. Ranking boosts: role, confidence, recency, and department relevance.
+- Retrieval: UI shows preview images/snippets first via signed URLs; originals fetched from S3 only on demand. Watermark previews when policy requires.
+- Design Issues & Controls:
+  • Scaling HTTP Caches on S3: CDN/HTTP caches for previews; cache‑control based on sensitivity.
+  • Reuse Cache Among Users: Shared preview/render cache when policy allows; personalized results vary by role/scope.
+  • Availability: ES replicas, snapshot/restore; cross‑region S3 replication optional.
+
+4.7 Centralized Access, APIs, and UI
+- REST APIs: Commands—ingest, approve, reprocess, notify, bulk operations, and webhooks.
+- GraphQL: Composite read models for UI (documents + tasks + policies) with field‑level auth.
+- Persona‑based UI: Central, department, sub‑department views; manager vs staff features; queue dashboards; lineage and confidence explanations.
+- Voice Assistant: RBAC‑aware natural language queries over indexed metadata; returns summaries/snippets only per policy; logs prompts/answers; supports purpose‑of‑use tagging.
+- Design Issues & Controls:
+  • REST vs GraphQL: REST for commands; GraphQL for flexible UI reads; both documented via OpenAPI/SDL.
+  • Security: OAuth2/OIDC, short‑lived tokens, fine‑grained scopes; mTLS between services.
+  • Standards: JSON Schema for events; stable versioning and consumer‑driven contracts.
+
+4.8 Governance, Compliance, Version Control & Traceability
+- Event‑Sourced Audit: Every transformation, access, and policy change recorded with correlation IDs.
+- Versioning: Content‑addressed versions in S3; document record pointers updated atomically; diff for extracted fields.
+- Policy Compliance: SoD checks, retention schedules, export controls, legal holds, classification tags; gates before external sharing.
+- Attestations: Model version, prompt ID, evaluation set, and policy version stamped on each document.
+
+5) Cross‑Cutting Quality Attributes
+5.1 Security & Access Control
+- Principle of Least Privilege across queues, indices, and buckets; workload identity; secrets in managed store with rotation.
+- Row/field‑level authz enforced at API and search layers; multi‑tenant isolation via index aliases and bucket prefixes.
+- Admin hardening: configured passwords, MFA, break‑glass procedures, and mandatory change logging.
+
+5.2 Networking & Availability
+- Multihomed architecture: control plane isolated from data plane; private links to S3/ES; NAT egress for external model calls.
+- Load Balancing: L7 for APIs/GraphQL; L4 for workers/OCR pools; circuit breakers, retries with jitter, timeouts.
+- HA/DR: Multi‑AZ deployments, ES replicas, replicated queues, S3 versioning and replication; periodic disaster recovery drills.
+
+5.3 Performance, Capacity & Cost
+- Load Testing: Ingest spikes, OCR bursts, LLM throughput, ES query concurrency; p95 budgets per stage.
+- Connection Pooling: Tuned pools for MongoDB/ES/S3; thread pools sized by CPU/IO; back‑pressure driven by queue depth.
+- Caching Strategy:
+  • HTTP caches/CDN for previews with signed URLs and role‑vary headers.
+  • Redis for LLM prompt/embedding caches and GraphQL result caching.
+  • Careful with personalized data (short TTL, vary by role/scope).
+- Autoscaling: Workers scale on queue depth/latency; ES nodes on QPS/p99; OCR GPU pools on utilization.
+
+5.4 Asynchronous Processing Risks & Mitigations
+- No Message Ordering: Design all processors to be idempotent; correlate with documentId; use state machines that tolerate out‑of‑order events.
+- Message Requeueing: Exponential backoff, retry limits, DLQ per stage; quarantine UI to inspect and replay.
+- Coupling Risks: Use schema registry and strict versioning; consumer‑driven contracts and topic versioning; backward compatibility by default.
+- Complexity: Golden service templates, shared libraries for auth/events/tracing; standard runbooks and SLOs; minimal responsibilities per service.
+
+5.5 Duplicate Handling & Reuse
+- Deduplicate at ingest via contentHash; skip downstream work for exact duplicates.
+- Reuse OCR/LLM artifacts when model/prompt versions compatible; reprocess selectively when versions change.
+
+6) Data Model & Event Contracts (high level)
+- MongoDB Document Record:
+  { documentId, contentHash, s3Key, dept, sensitivity, status, languageTags, ocrPointers, llmFields { summary, keywords, entities, docType, confidence }, rulesFired, approvals[], auditRefs[], modelVersion, promptVersion, createdAt, updatedAt }
+- Event Types (JSON Schema, versioned):
+  • IngestedDocumentEvent
+  • NormalizedDocumentEvent
+  • OcrCompletedEvent
+  • LlMExtractedEvent
+  • RoutingDecisionEvent
+  • AccessAuditEvent
+
+7) Search Design Details
+- Indices: docs_{dept}_{yyyy_mm} with ILM; warm/cold phases to control cost; snapshots for backup.
+- Fields & Analyzers: language‑specific analyzers for English and Malayalam; synonym and phonetic filters; field‑level boosts for title/entities; role‑aware ranking adjustments.
+- Queries: Full‑text, filtered queries (dept/type/date/confidence), faceting for quick navigation; vector search optional for semantic matches.
+
+8) Voice Assistant Design
+- Scope: Operates on indexed metadata and allowed snippets; does not expose full raw documents via voice. Commands: "Find last month’s vendor invoices over ₹X in Dept Y", "Summarize this document’s key risks", "Who accessed file Z last week?".
+- Guardrails: ABAC/RBAC evaluation on every query; rate limits; PII masking in responses; refusal when policy denies with clear explanation.
+- Auditability: Store prompts, responses, and decision trace (rules, scopes, user); enable replay for investigations.
+
+9) UI/UX
+- Persona Dashboards:
+  • Central Committee: Cross‑tenant health (queue depth, DLQ rate, accuracy), policy diffs, access grants/recalls, audit explorer.
+  • Managers: Department SLAs, low‑confidence queue, exceptions, accuracy trends.
+  • Staff: Worklist, saved searches, previews, one‑click escalate/reprocess.
+- Explainability: Show rules fired, confidence, model/prompt versions, lineage timeline per document.
+
+10) KPIs, SLOs & Reporting
+- KPIs: Auto‑route rate (≥90% at threshold), manual backlog age, OCR accuracy by language (CER/WER), p95 ingest→preview latency, search p95, policy violations (0), MTTR for failed stages, cost per 1,000 pages.
+- SLOs: e.g., p95 ingest→indexed ≤ X minutes; search p95 ≤ Y ms; DLQ drain ≤ Z hours; monthly availability ≥ 99.9%.
+- Reports: Weekly trend of auto‑route, review SLA breaches, top failure causes, model drift signals.
+
+11) Risk Register & Mitigations
+- Model Drift: Scheduled evaluations, shadow runs, canary rollout, rollback playbooks.
+- PII Leakage via Caches: Role‑vary headers, short TTLs, preview watermarking, server‑side cache for shared assets only.
+- Cross‑Department Data Bleed: Strict partitioning in indices/buckets; enforced filters in API/ES; alert on policy violations.
+- Vendor Lock‑in: Abstract OCR/LLM providers; maintain minimal on‑prem fallback models for critical flows.
+- Operational Complexity: Consolidated platform tooling, standards, and templates; clear ownership and RACI.
+
+12) Implementation Schedule (12–16 Weeks Baseline)
+Phase 0 – Foundations (Week 1)
+- Governance kickoff; define departments/roles; choose queue (Kafka/RabbitMQ), ES, MongoDB, S3; set IaC repo and CI/CD; baseline security (OIDC, secrets store). Milestone: Platform skeleton deployed.
+
+Phase 1 – Ingestion & Storage (Weeks 2–3)
+- Implement WhatsApp, Email, SharePoint, Scan connectors.
+- Idempotent ingest with contentHash, schema validation, S3 write, and IngestedDocumentEvent.
+- Basic UI to monitor intake.
+Milestone: Multi‑source ingestion live; dedup active.
+
+Phase 2 – Normalization & OCR (Weeks 4–6)
+- PDF/A normalization and page manifest; language detection.
+- Distributed OCR workers with autoscaling and DLQ; quality enhancement pipeline.
+- Metrics for WER/CER; dashboards.
+Milestone: p95 ingest→OCR text within target; bilingual accuracy baseline.
+
+Phase 3 – LLM Understanding & Caching (Weeks 6–8)
+- Summarization, keywords, entities, docType classification; versioned prompts per department; response cache.
+- Confidence gating policy and manual review queue wiring.
+Milestone: ≥80% auto‑route accuracy in pilot departments.
+
+Phase 4 – Segregation, Policy Routing & Approvals (Weeks 8–10)
+- Train decision tree on features; implement policy engine with ABAC/RBAC; human‑in‑loop console with SLA timers.
+- Attestations saved (model/prompt/policy versions).
+Milestone: ≥90% auto‑route at configured threshold in pilot.
+
+Phase 5 – Indexing, Search & UI (Weeks 9–11)
+- ES indices/aliases with ILM; bilingual analyzers and synonyms.
+- Persona UI with previews (signed URLs/CDN), search filters, explainability.
+Milestone: Search p95 target; preview‑first retrieval live.
+
+Phase 6 – Centralized Access, Voice Assistant & Reporting (Weeks 11–13)
+- GraphQL read models; REST commands; centralized dashboards for committee.
+- RBAC‑aware voice assistant with guardrails; prompt/response auditing.
+- KPI/SLO reporting and alerts.
+Milestone: Cross‑tenant monitoring and voice assistant pilot.
+
+Phase 7 – Hardening & Go‑Live (Weeks 13–16)
+- Load testing across stages; chaos/resiliency drills; cost optimization and autoscaling tuning.
+- Security reviews, penetration tests, standards sign‑off (PDF/A, OpenAPI, OAuth2/OIDC, JSON Schema).
+- Runbooks, on‑call setup, and go‑live.
+Milestone: Production launch with defined SLOs and runbooks.
+
+RACI (High Level)
+- Central Committee: Accountable for policies, approvals, access grants/recalls, standards sign‑off.
+- Platform Team: Responsible for platform services (queues, ES, MongoDB, S3), CI/CD, observability, security baseline.
+- Department Managers: Accountable for department rules, SLAs, manual review quality; Consulted for model tuning.
+- Department Staff: Responsible for timely review of low‑confidence items; Informed on policy updates.
+- Data Science/ML: Responsible for OCR/LLM model selection, prompt design, evals, and drift monitoring.
+- App Team: Responsible for UI, APIs, GraphQL, and voice assistant.
+
+13) API & Contract Examples (abbreviated)
+- POST /ingest: multipart/form‑data with metadata envelope; returns documentId.
+- GET /documents/{id}: metadata, lineage, current status, and signed preview URL if authorized.
+- POST /approve/{id}: approve routing decision; logs AccessAuditEvent.
+- GraphQL query DocumentList(filter): returns paginated docs with fields authorized for the caller.
+- Event schemas versioned in registry; consumers implement contract tests.
+
+14) Operations & Observability
+- Logging: Structured logs with redaction; correlation IDs propagated from ingest to archive; centralized log search.
+- Metrics: Per‑stage latency/throughput, error rates, accuracy, queue depth, DLQ size; budget‑based SLO dashboards.
+- Tracing: Distributed traces across services and queue boundaries; visualize critical paths (ingest→preview, OCR→index, review→route).
+- Alerts: Queue lag thresholds, DLQ growth, accuracy dips, ES p99 latency, S3 error rate; paging for on‑call; dashboards for committee.
+
+15) Cost & Sustainability
+- Storage tiering via ILM and S3 lifecycle; compress text/JSON where safe; dedup reuse.
+- Autoscaling to match diurnal patterns; batch heavy OCR at off‑peak when permissible.
+- Optimize LLM usage: prefer small/local models for routine extraction; cache aggressively; use large models sparingly.
+
+16) Acceptance Criteria (Go‑Live Readiness)
+- Functional: Ingestion from all defined sources; bilingual OCR with target accuracy; LLM extraction producing summary, keywords, entities; policy routing; search & preview; manual review; audit trail.
+- Non‑Functional: p95 latency targets per stage; 99.9% monthly availability; no critical security findings; DR tested; runbooks complete.
+- Compliance: Versioning enabled, retention policies implemented, access approvals logged; standards aligned (PDF/A, OpenAPI, OAuth2/OIDC, JSON Schema; ISO 27001 controls alignment).
+
+17) Appendix – Glossary
+- ABAC: Attribute‑Based Access Control.
+- RBAC: Role‑Based Access Control.
+- DLQ: Dead Letter Queue.
+- ILM: Index Lifecycle Management.
+- CER/WER: Character/Word Error Rate.
+- SLO/SLA: Service Level Objective/Agreement.
+- Idempotency Key: Unique key to avoid duplicate processing of the same request/event.
+- Content Hash: SHA‑256 hash of raw document bytes used for dedup and cache keys.
+
+18) Appendix – Design Principles Mapped to Workflow
+- Promoting Loose Coupling: Achieved via event bus between every stage; idempotent, replayable events; DLQs isolate failures.
+- Functional Partitioning: Dedicated services per stage (ingest, normalize, OCR, LLM, router, indexer, notifier, UI).
+- Data Partitioning: S3 prefixes and ES indices per department/sensitivity; per‑queue namespaces.
+- Load Balancers: L7 for APIs/GraphQL; L4 for workers; health checks/circuit breakers.
+- Caching Service Responses: LLM response cache, GraphQL cache; role‑vary, short TTL where personalized.
+- Replication: ES replicas and snapshots; optional cross‑region S3 replication; audit log replication.
+- Scaling HTTP Caches on S3: CDN for previews with cache‑control tuned by sensitivity.
+- Common Object Caches: Redis for prompts/embeddings/synonyms and policy evaluations.
+- Reuse Cache Among Users: Outputs keyed by contentHash+versions; deliver gated by authz.
+- Asynchronous Processing: No ordering guarantees, idempotent consumers, backoff/requeue, quarantine tools.
+- Monitoring & Alerting (Central Committee): Cross‑tenant dashboards and alerts for queue depth, DLQ, accuracy, latency, policy violations.
+- Capacity: Load tests, connection pooling, cautious caching, autoscaling based on queue depth and utilization.
+- Networking: Multihomed servers, private links, NAT egress; service mesh with mTLS and retries.
+- Security: Least privilege, configured secrets, workload identity; short‑lived credentials; audit every access.
+- Availability: Load balancing, multi‑AZ, replicated queues, ES HA; snapshot/restore.
+- Administration & Transparency: Provenance UI, lineage display, rules fired, model/prompt versions.
+- Standards: PDF/A, OpenAPI, JSON Schema, OAuth2/OIDC, de jure and de facto interoperability.
+- Adoption & Enterprise Architecture: Central identity, common logging/monitoring/storage; SDKs and templates; department onboarding.
+
+This document captures the complete workflow, design mappings, schedules, risks, and operational practices required to implement the Data Pulse solution and reduce document overload at KMRL with accuracy, security, and scale.

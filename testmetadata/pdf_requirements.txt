@@ -1,0 +1,20 @@
+# Additional dependencies for PDF metadata extraction
+# Install these packages for full functionality
+
+# PDF processing
+PyMuPDF>=1.23.0
+pdf2image>=3.1.0
+
+# Image processing (if not already installed)
+opencv-python>=4.8.0
+Pillow>=10.0.0
+pytesseract>=0.3.10
+
+# Additional utilities
+numpy>=1.24.0
+concurrent-futures>=3.1.1
+
+# Note: For pdf2image, you may also need to install poppler-utils:
+# On Ubuntu/Debian: sudo apt-get install poppler-utils
+# On Windows: Download poppler binaries and add to PATH
+# On macOS: brew install poppler

@@ -1,0 +1,91 @@
+{
+  "metadata_extraction": {
+    "status": "SUCCESS",
+    "total_files": 1489,
+    "successful_extractions": 1489,
+    "failed_extractions": 0,
+    "success_rate": 100.0,
+    "extraction_time_seconds": 40.64514660835266,
+    "files_per_second": 36.63414021722356,
+    "workers_used": 32
+  },
+  "ocr_routing": {
+    "status": "SUCCESS",
+    "service_health": "HEALTHY",
+    "routing_results": {
+      "status": "SUCCESS",
+      "processing_time_ms": 2158.0684185028076,
+      "documents_processed": 1489,
+      "engine_distribution": {
+        "tesseract_standard": 1489
+      },
+      "average_confidence": 0.0,
+      "average_latency": 0.7999999999999776,
+      "features_used": 10,
+      "sample_routing": {
+        "document_id": "batch1-0080",
+        "posteriors": {
+          "tesseract_standard": 0.0,
+          "tesseract_form_trained": 0.0,
+          "paddle_malayalam": 0.0,
+          "donut_tabular": 0.0,
+          "easyocr": 0.0
+        },
+        "normalized_latency": {
+          "tesseract_standard": 0.30000000000000004,
+          "tesseract_form_trained": 0.5,
+          "paddle_malayalam": 0.0,
+          "donut_tabular": 1.0,
+          "easyocr": 0.5
+        },
+        "normalized_resource_cost": {
+          "tesseract_standard": 0.0,
+          "tesseract_form_trained": 0.06666666666666665,
+          "paddle_malayalam": 0.6666666666666666,
+          "donut_tabular": 1.0,
+          "easyocr": 0.03333333333333336
+        },
+        "utility_scores": {
+          "tesseract_standard": -0.15000000000000002,
+          "tesseract_form_trained": -0.2833333333333333,
+          "paddle_malayalam": -0.3333333333333333,
+          "donut_tabular": -1.0,
+          "easyocr": -0.26666666666666666
+        },
+        "chosen_engine": "tesseract_standard",
+        "fallback_candidates": [],
+        "expected_latency_sec": 0.8,
+        "expected_confidence": 0.0,
+        "preprocessing_recommendation": [
+          "DPI_increase"
+        ],
+        "reason": "Selected tesseract_standard due to low confidence"
+      }
+    },
+    "total_documents": 1489,
+    "successful_routing": 1489
+  },
+  "performance_metrics": {
+    "metadata_extraction_performance": {
+      "files_per_second": 36.63414021722356,
+      "success_rate": 100.0,
+      "extraction_time": 40.64514660835266,
+      "workers_used": 32
+    },
+    "ocr_routing_performance": {
+      "average_routing_time_ms": 2158.0684185028076,
+      "routing_success_rate": 100,
+      "documents_processed": 1489,
+      "engine_distribution": {
+        "tesseract_standard": 1489
+      }
+    },
+    "system_throughput": {
+      "end_to_end_latency": 0,
+      "total_processing_capacity": 36.63414021722356,
+      "scalability_score": 50
+    }
+  },
+  "overall_status": "SUCCESS",
+  "total_test_time_seconds": 45.021389961242676
+}

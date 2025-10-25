@@ -1,0 +1,374 @@
+{
+  "metadata_extraction": {
+    "status": "SUCCESS",
+    "total_files": 1007,
+    "successful_extractions": 1007,
+    "failed_extractions": 0,
+    "success_rate": 100.0,
+    "extraction_time_seconds": 14.300227403640747,
+    "files_per_second": 70.41846060039745,
+    "workers_used": 32,
+    "sample_features": {
+      "document_id": "invoice_Aaron Hawkins_40101",
+      "page_count": 1,
+      "total_characters": 377,
+      "has_tables": false,
+      "text_density": 777.7942826962435,
+      "recommended_engine": "paddleocr"
+    }
+  },
+  "ocr_routing": {
+    "status": "SUCCESS",
+    "service_health": "HEALTHY",
+    "routing_tests": {
+      "Default Parameters": {
+        "status": "SUCCESS",
+        "processing_time_ms": 2064.0246868133545,
+        "documents_processed": 10,
+        "engine_distribution": {
+          "tesseract_standard": 10
+        },
+        "average_confidence": 0.0,
+        "average_latency": 0.7999999999999999,
+        "features_used": 10,
+        "workers_used": 32,
+        "sample_routing": {
+          "document_id": "invoice_Aaron Hawkins_40101",
+          "posteriors": {
+            "tesseract_standard": 0.0,
+            "tesseract_form_trained": 0.0,
+            "paddle_malayalam": 0.0,
+            "donut_tabular": 0.0,
+            "easyocr": 0.0
+          },
+          "normalized_latency": {
+            "tesseract_standard": 0.30000000000000004,
+            "tesseract_form_trained": 0.5,
+            "paddle_malayalam": 0.0,
+            "donut_tabular": 1.0,
+            "easyocr": 0.5
+          },
+          "normalized_resource_cost": {
+            "tesseract_standard": 0.0,
+            "tesseract_form_trained": 0.06666666666666665,
+            "paddle_malayalam": 0.6666666666666666,
+            "donut_tabular": 1.0,
+            "easyocr": 0.03333333333333336
+          },
+          "utility_scores": {
+            "tesseract_standard": -0.15000000000000002,
+            "tesseract_form_trained": -0.2833333333333333,
+            "paddle_malayalam": -0.3333333333333333,
+            "donut_tabular": -1.0,
+            "easyocr": -0.26666666666666666
+          },
+          "chosen_engine": "tesseract_standard",
+          "fallback_candidates": [],
+          "expected_latency_sec": 0.8,
+          "expected_confidence": 0.0,
+          "preprocessing_recommendation": [],
+          "reason": "Selected tesseract_standard due to low confidence, high text density, contains forms"
+        }
+      },
+      "High Accuracy Preference": {
+        "status": "SUCCESS",
+        "processing_time_ms": 2066.7099952697754,
+        "documents_processed": 10,
+        "engine_distribution": {
+          "tesseract_standard": 10
+        },
+        "average_confidence": 0.0,
+        "average_latency": 0.7999999999999999,
+        "features_used": 10,
+        "workers_used": 32,
+        "sample_routing": {
+          "document_id": "invoice_Aaron Hawkins_40101",
+          "posteriors": {
+            "tesseract_standard": 0.0,
+            "tesseract_form_trained": 0.0,
+            "paddle_malayalam": 0.0,
+            "donut_tabular": 0.0,
+            "easyocr": 0.0
+          },
+          "normalized_latency": {
+            "tesseract_standard": 0.30000000000000004,
+            "tesseract_form_trained": 0.5,
+            "paddle_malayalam": 0.0,
+            "donut_tabular": 1.0,
+            "easyocr": 0.5
+          },
+          "normalized_resource_cost": {
+            "tesseract_standard": 0.0,
+            "tesseract_form_trained": 0.06666666666666665,
+            "paddle_malayalam": 0.6666666666666666,
+            "donut_tabular": 1.0,
+            "easyocr": 0.03333333333333336
+          },
+          "utility_scores": {
+            "tesseract_standard": -0.15000000000000002,
+            "tesseract_form_trained": -0.2833333333333333,
+            "paddle_malayalam": -0.3333333333333333,
+            "donut_tabular": -1.0,
+            "easyocr": -0.26666666666666666
+          },
+          "chosen_engine": "tesseract_standard",
+          "fallback_candidates": [],
+          "expected_latency_sec": 0.8,
+          "expected_confidence": 0.0,
+          "preprocessing_recommendation": [],
+          "reason": "Selected tesseract_standard due to low confidence, high text density, contains forms"
+        }
+      },
+      "High Speed Preference": {
+        "status": "SUCCESS",
+        "processing_time_ms": 2064.000129699707,
+        "documents_processed": 10,
+        "engine_distribution": {
+          "tesseract_standard": 10
+        },
+        "average_confidence": 0.0,
+        "average_latency": 0.7999999999999999,
+        "features_used": 10,
+        "workers_used": 32,
+        "sample_routing": {
+          "document_id": "invoice_Aaron Hawkins_40101",
+          "posteriors": {
+            "tesseract_standard": 0.0,
+            "tesseract_form_trained": 0.0,
+            "paddle_malayalam": 0.0,
+            "donut_tabular": 0.0,
+            "easyocr": 0.0
+          },
+          "normalized_latency": {
+            "tesseract_standard": 0.30000000000000004,
+            "tesseract_form_trained": 0.5,
+            "paddle_malayalam": 0.0,
+            "donut_tabular": 1.0,
+            "easyocr": 0.5
+          },
+          "normalized_resource_cost": {
+            "tesseract_standard": 0.0,
+            "tesseract_form_trained": 0.06666666666666665,
+            "paddle_malayalam": 0.6666666666666666,
+            "donut_tabular": 1.0,
+            "easyocr": 0.03333333333333336
+          },
+          "utility_scores": {
+            "tesseract_standard": -0.15000000000000002,
+            "tesseract_form_trained": -0.2833333333333333,
+            "paddle_malayalam": -0.3333333333333333,
+            "donut_tabular": -1.0,
+            "easyocr": -0.26666666666666666
+          },
+          "chosen_engine": "tesseract_standard",
+          "fallback_candidates": [],
+          "expected_latency_sec": 0.8,
+          "expected_confidence": 0.0,
+          "preprocessing_recommendation": [],
+          "reason": "Selected tesseract_standard due to low confidence, high text density, contains forms"
+        }
+      },
+      "Low Resource Preference": {
+        "status": "SUCCESS",
+        "processing_time_ms": 2077.418088912964,
+        "documents_processed": 10,
+        "engine_distribution": {
+          "tesseract_standard": 10
+        },
+        "average_confidence": 0.0,
+        "average_latency": 0.7999999999999999,
+        "features_used": 10,
+        "workers_used": 32,
+        "sample_routing": {
+          "document_id": "invoice_Aaron Hawkins_40101",
+          "posteriors": {
+            "tesseract_standard": 0.0,
+            "tesseract_form_trained": 0.0,
+            "paddle_malayalam": 0.0,
+            "donut_tabular": 0.0,
+            "easyocr": 0.0
+          },
+          "normalized_latency": {
+            "tesseract_standard": 0.30000000000000004,
+            "tesseract_form_trained": 0.5,
+            "paddle_malayalam": 0.0,
+            "donut_tabular": 1.0,
+            "easyocr": 0.5
+          },
+          "normalized_resource_cost": {
+            "tesseract_standard": 0.0,
+            "tesseract_form_trained": 0.06666666666666665,
+            "paddle_malayalam": 0.6666666666666666,
+            "donut_tabular": 1.0,
+            "easyocr": 0.03333333333333336
+          },
+          "utility_scores": {
+            "tesseract_standard": -0.15000000000000002,
+            "tesseract_form_trained": -0.2833333333333333,
+            "paddle_malayalam": -0.3333333333333333,
+            "donut_tabular": -1.0,
+            "easyocr": -0.26666666666666666
+          },
+          "chosen_engine": "tesseract_standard",
+          "fallback_candidates": [],
+          "expected_latency_sec": 0.8,
+          "expected_confidence": 0.0,
+          "preprocessing_recommendation": [],
+          "reason": "Selected tesseract_standard due to low confidence, high text density, contains forms"
+        }
+      }
+    },
+    "total_tests": 4,
+    "successful_tests": 4,
+    "workers_used": 32
+  },
+  "performance_metrics": {
+    "metadata_extraction_performance": {
+      "files_per_second": 70.41846060039745,
+      "success_rate": 100.0,
+      "extraction_time": 14.300227403640747,
+      "workers_used": 32
+    },
+    "ocr_routing_performance": {
+      "average_routing_time_ms": 2068.03822517395,
+      "routing_success_rate": 100.0,
+      "total_routing_tests": 4,
+      "workers_used": 32
+    },
+    "batch_processing_performance": {
+      "max_batch_size_tested": 100,
+      "best_throughput": 48.277941077786195,
+      "average_latency_per_doc": 87.78417885303497
+    },
+    "load_testing_performance": {
+      "concurrent_requests": 10,
+      "success_rate": 100.0,
+      "throughput_under_load": 14.548051104794798
+    },
+    "system_throughput": {
+      "end_to_end_latency": 16.368265628814697,
+      "total_processing_capacity": 0.4835500561968028,
+      "scalability_score": 100
+    }
+  },
+  "overall_status": "SUCCESS",
+  "total_test_time_seconds": 34.946197271347046,
+  "batch_processing": {
+    "batch_10": {
+      "status": "SUCCESS",
+      "batch_size": 10,
+      "processing_time_ms": 2066.1349296569824,
+      "documents_per_second": 4.839954959601883,
+      "average_latency_per_doc": 206.61349296569824,
+      "engine_distribution": {
+        "tesseract_standard": 10
+      },
+      "average_confidence": 0.0
+    },
+    "batch_25": {
+      "status": "SUCCESS",
+      "batch_size": 25,
+      "processing_time_ms": 2065.4594898223877,
+      "documents_per_second": 12.103844264769284,
+      "average_latency_per_doc": 82.61837959289551,
+      "engine_distribution": {
+        "tesseract_standard": 25
+      },
+      "average_confidence": 0.0
+    },
+    "batch_50": {
+      "status": "SUCCESS",
+      "batch_size": 50,
+      "processing_time_ms": 2059.572458267212,
+      "documents_per_second": 24.27688319451829,
+      "average_latency_per_doc": 41.19144916534424,
+      "engine_distribution": {
+        "tesseract_standard": 50
+      },
+      "average_confidence": 0.0
+    },
+    "batch_100": {
+      "status": "SUCCESS",
+      "batch_size": 100,
+      "processing_time_ms": 2071.3393688201904,
+      "documents_per_second": 48.277941077786195,
+      "average_latency_per_doc": 20.713393688201904,
+      "engine_distribution": {
+        "tesseract_standard": 100
+      },
+      "average_confidence": 0.0
+    }
+  },
+  "load_testing": {
+    "concurrent_requests": 10,
+    "total_time_seconds": 2.062131881713867,
+    "successful_requests": 10,
+    "failed_requests": 0,
+    "success_rate": 100.0,
+    "average_processing_time_ms": 2055.3817749023438,
+    "total_documents_processed": 30,
+    "throughput_docs_per_second": 14.548051104794798,
+    "request_results": [
+      {
+        "request_id": 4,
+        "status": "SUCCESS",
+        "processing_time_ms": 2052.8438091278076,
+        "documents_processed": 3
+      },
+      {
+        "request_id": 9,
+        "status": "SUCCESS",
+        "processing_time_ms": 2050.415277481079,
+        "documents_processed": 3
+      },
+      {
+        "request_id": 0,
+        "status": "SUCCESS",
+        "processing_time_ms": 2057.1703910827637,
+        "documents_processed": 3
+      },
+      {
+        "request_id": 5,
+        "status": "SUCCESS",
+        "processing_time_ms": 2053.931713104248,
+        "documents_processed": 3
+      },
+      {
+        "request_id": 2,
+        "status": "SUCCESS",
+        "processing_time_ms": 2057.307243347168,
+        "documents_processed": 3
+      },
+      {
+        "request_id": 8,
+        "status": "SUCCESS",
+        "processing_time_ms": 2053.2310009002686,
+        "documents_processed": 3
+      },
+      {
+        "request_id": 1,
+        "status": "SUCCESS",
+        "processing_time_ms": 2059.04483795166,
+        "documents_processed": 3
+      },
+      {
+        "request_id": 6,
+        "status": "SUCCESS",
+        "processing_time_ms": 2055.591344833374,
+        "documents_processed": 3
+      },
+      {
+        "request_id": 7,
+        "status": "SUCCESS",
+        "processing_time_ms": 2055.161237716675,
+        "documents_processed": 3
+      },
+      {
+        "request_id": 3,
+        "status": "SUCCESS",
+        "processing_time_ms": 2059.1208934783936,
+        "documents_processed": 3
+      }
+    ]
+  }
+}
